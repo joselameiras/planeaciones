@@ -1,0 +1,978 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Matemáticas Discretas</title>
+</head>
+
+<body>
+    <div class="container">
+        <div name="Datos Generales">
+            <h1>1.- Datos generales de la asignatura</h1>
+            <p> <b>Nombre de la asignatura: </b>Matemáticas Discretas <br> <b>Clave de la asignatura: </b>
+                AEF-1041 <br> <b title="Sistema de Asignación y Transferencia de Créditos Académicos">SATCA*: </b> 3-2-5
+            </p>
+            <h1>2.- Presentación</h1>
+            <h2>Caracterización de la asignatura</h2>
+            <p>Esta asignatura aporta al perfil del egresado los conocimientos lógico-matemáticos para entender,
+                inferir, aplicar y desarrollar modelos matemáticos tendientes a resolver problemas en el área de las
+                ciencias computacionales.
+            </p>
+            <p>Es el soporte para un conjunto de asignaturas que se encuentran vinculadas directamente con las
+                competencias profesionales que se desarrollarán, por lo que se incluye en los primeros semestres de la
+                trayectoria escolar. Aporta conocimientos a las asignaturas de Estructura de Datos y Redes de
+                Computadoras con los conceptos básicos de Grafos y Árboles.
+            </p>
+            <h2>Intención didactica</h2>
+            <p> ELa asignatura se organiza en seis temas de aprendizaje. Los dos primeros temas abordan conceptos
+                básicos que serán utilizados a lo largo de curso, mientras que los cuatro restantes analizan contenidos
+                propios del área de las ciencias computacionales. </p>
+            <p> El primer tema se revisan los procedimientos para realizar la conversión entre diferentes bases
+                numéricas, examinando las operaciones básicas: suma, resta, multiplicación y división, buscando que el
+                estudiante analice y genere un procedimiento general de conversión entre bases numéricas.
+            </p>
+            <p> Los conceptos básicos de conjuntos y relaciones son revisados en el tema dos de la asignatura, en ella
+                se analiza las características, propiedades y operaciones entre conjuntos, mismos que serán validados
+                en los temas de álgebra booleana y lógica matemática. Por otro lado, los tópicos concernientes a las
+                relaciones se abordan por medio del conocimiento del producto cartesiano, enfatizando en las
+                relaciones de tipo binario y su representación. Adicionalmente se revisan las propiedades, relaciones de
+                equivalencia, órdenes parciales y funciones como casos particulares de relaciones.
+
+            </p>
+            <p> Por su parte el tema tres, hace un análisis de la lógica proposicional con la finalidad de llegar a
+                procesos de demostración formal, así mismo se examinan los conceptos de lógica de predicados y
+                algebra declarativa. El concepto de inducción matemática es abordado en forma particular dada su
+                aplicación en proceso de análisis y demostración de modelos matemáticos.
+
+            </p>
+
+
+            <p> En el tema cuatro, se estudian los teoremas y postulados con operaciones básicas en la simplificación
+                de expresiones booleanas.</p>
+            <p> El penúltimo tema de la asignatura, proporciona los conocimientos relacionados con la Teoría de
+                grafos: conceptos básicos, representación, clasificación; así como los algoritmos de recorrido y
+                búsqueda son analizados para su posterior aplicación. </p>
+            <p> Finalmente, el tema seis Árboles y redes son revisados como un caso especial de grafos. </p>
+            <p>Los contenidos se abordarán de manera secuencial como los marca el programa, buscando la aplicación
+                del conocimiento, basado en actividades que promuevan en el estudiante el desarrollo de sus
+                habilidades para trabajar en equipo y llevar el conocimiento a la práctica, buscando con ello que
+                integre
+                ese saber a su experiencia personal mediante un aprendizaje significativo.</p>
+            <p>La extensión y profundidad de los temas será la suficiente para garantizar que el estudiante logre las
+                competencias señaladas oportunamente.</p>
+            <p>El docente además de ser un motivador permanente en el proceso educativo deberá ser promotor y
+                director de la enseñanza a través de la transmisión del conocimiento, así como la aplicación de sus
+                habilidades y destrezas utilizando las herramientas tradicionales y digitales a su alcance para cautivar
+                a
+                sus estudiantes e interesarlos en el tema.</p>
+            <h1>3.- Participantes en el diseño y seguimiento curricular del programa</h1>
+            <div class="row mb-3 ">
+                <div class="col-md-4 themed-grid-col border">Instituto Tecnológico de Aguascalientes del 15 al 18 de
+                    junio de 2010.</div>
+                <div class="col-md-4 themed-grid-col border">Representantes de los Institutos Tecnológicos de: Centro
+                    Interdisciplinario de Investigación y Docencia en Educación Técnica, Acapulco, Aguascalientes,
+                    Apizaco, Boca Río, Celaya, Chetumal, Chihuahua, Chilpancingo, Chiná, Cd. Cuauhtémoc, Cd. Juárez, Cd.
+                    Madero, Cd. Victoria, Colima, Comitán, Cuautla, Durango, El Llano de Aguascalientes, Huixquilucan,
+                    Valle Bravo, Guaymas, Huatabampo, Huejutla, Iguala, La Laguna, La Paz, La Zona Maya, León, Lerma,
+                    Linares, Los Mochis, Matamoros, Mazatlán, Mérida, Mexicali, Minatitlán, Nuevo Laredo, Orizaba,
+                    Pachuca, Puebla, Querétaro, Reynosa, Roque, Salina Cruz, Saltillo, San Luis Potosí, Tehuacán, Tepic,
+                    Tijuana, Tlaxiaco, Toluca, Torreón, Tuxtepec, Valle de Oaxaca, Veracruz, Villahermosa, Zacatecas,
+                    Zacatepec, Altiplano de Tlaxcala, Coatzacoalcos, Cuautitlán Izcalli, Fresnillo, Irapuato, La Sierra
+                    Norte Puebla, Macuspana, Naranjos, Pátzcuaro, Poza Rica, Progreso, Puerto Vallarta,
+                    Tacámbaro,Tamazula Gordiano, Tlaxco, Venustiano Carranza, Zacapoaxtla, Zongólica y Oriente del
+                    Estado Hidalgo.</div>
+                <div class="col-md-4 themed-grid-col border">Elaboración del programa de estudio equivalente en la
+                    Reunión Nacional de Implementación Curricular y Fortalecimiento Curricular de las asignaturas
+                    comunes por área de conocimiento para los planes de estudio actualizados del SNEST.</div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-4 themed-grid-col border">Instituto Tecnológico de Morelia del 10 al 13 de septiembre
+                    de 2013.</div>
+                <div class="col-md-4 themed-grid-col border">Representantes de los Institutos Tecnológicos de:
+                    Aguascalientes, Apizaco, Boca del Río, Celaya, CRODE Celaya, Cerro Azul, Chihuahua, Cd. Cuauhtémoc,
+                    Cd. Hidalgo, Cd. Juárez, Cd. Madero, Cd. Valles, Coacalco, Colima, Iguala, La Laguna, Lerdo, Los
+                    Cabos, Matamoros, Mérida, Morelia, Motúl, Múzquiz, Nuevo Laredo, Nuevo León, Oriente del Estado de
+                    México, Orizaba, Pachuca, Progreso, Purhepecha, Salvatierra, San Juan del Río, Santiago Papasquiaro,
+                    Tantoyuca, Tepic, Tlatlauquitpec, Valle de Morelia, Venustiano Carranza, Veracruz, Villahermosa,
+                    Zacatecas y Zacatepec.</div>
+                <div class="col-md-4 themed-grid-col border">Reunión Nacional de Seguimiento Curricular de las
+                    Asignaturas Equivalentes del SNIT.</div>
+            </div>
+            <h1>4.- Competencia a desarrollar</h1>
+            <p>
+            <ul>
+                <li>Comprende y aplica los conceptos básicos de lógica matemática, relaciones, grafos y árboles para
+                    aplicarlos a modelos que resuelvan problemas computacionales.
+                </li>
+            </ul>
+            </p>
+            <h1>5.- Competencias previas</h1>
+            <p>
+            <ul>
+                <li>Ninguna</li>
+            </ul>
+            </p>
+        </div>
+
+        <div name="Temas">
+            <h1>6.- Temario y Actividades de Aprendizaje de los temas(7)</h1>
+            <div>
+                <h2>Tema 1: Sistemas numéricos</h2>
+                <h3>Subtemas</h3>
+                <ul>
+
+                    <li>1.1 Sistemas numéricos (Binario, Octal, Decimal, Hexadecimal)
+                    </li>
+                    <li>1.2 Conversiones entre sistemas numéricos
+                    </li>
+                    <li>1.3 Operaciones básicas (Suma, Resta, Multiplicación y División)
+                    </li>
+                    <li>1.4 Aplicación de los sistemas numéricos en la computación
+
+                    </li>
+
+                </ul>
+
+                <p></p>
+                <h3>Competencia Específica</h3>
+                <p>Comprende y aplica las conversiones entre los diferentes sistemas de numeración para su aplicación en
+                    problemas
+                    computacionales..</p>
+                <h3>Competencias Genéricas</h3>
+                <p>
+                </p>
+                <ul>
+                    <li>Capacidad de abstracción, análisis y síntesis
+                    </li>
+                    <li>Capacidad de aplicar los conocimientos en la práctica
+                    </li>
+                    <li>Conocimientos sobre el área de estudio y la profesión
+                    </li>
+                    <li>Habilidades para buscar, procesar y analizar información procedente de fuentes diversas
+                    </li>
+                    <li>Capacidad de trabajo en equipo
+
+                    </li>
+                </ul>
+                <h3>Actividades de aprendizaje</h3>
+                <ul>
+                    <li>Investigar en diferentes fuentes el concepto de
+                        sistema numérico, historia de los sistemas
+                        numéricos, utilidad y tipos de sistemas
+                        numéricos.
+                    </li>
+                    <li>Discutir en equipos la información investigada
+                        para llegar a conclusiones por equipos y
+                        finalmente grupal.
+                    </li>
+                    <li>Elaborar en equipos de trabajo un
+                        procedimiento general para convertir un
+                        número decimal a su equivalente en otro
+                        sistema numérico posicional.
+                    </li>
+                    <li>Investigar los procedimientos para convertir
+                        del sistema binario a octal y hexadecimal, de
+                        octal a binario y hexadecimal, y de
+                        hexadecimal a binario y octal.
+                    </li>
+                    <li>Representar y convertir cantidades en los
+                        sistemas numéricos: decimal, binario, octal y
+                        hexadecimal.
+                    </li>
+                    <li>Por medio de una hoja electrónica de cálculo
+                        desarrollar un método para llevar a cabo
+                        conversiones entre sistemas posiciónales.
+                    </li>
+                    <li>Realizar operaciones básicas de suma, resta,
+                        multiplicación y división en los sistemas
+                        decimal, binario, octal y hexadecimalconsiderando como base los algoritmos
+                        investigados.
+                    </li>
+                    <li>Por medio de una hoja electrónica de cálculo
+                        desarrollar un método que permita llevar a
+                        cabo operaciones aritméticas entre diferentes
+                        sistemas numéricos.
+                    </li>
+                    <li>Realizar sumas de cantidades en binario
+                        usando para ello complemento a dos.
+                    </li>
+                    <li>Realizar multiplicaciones y divisiones en
+                        binario usando el algoritmo de Booth.
+                    </li>
+                    <li>Elaborar un mapa conceptual del tema de
+                        sistemas numéricos.</li>
+                </ul>
+                <h3>Material</h3>
+                <ul>
+                    <li>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2>Tema 2: Conjuntos y relaciones</h2>
+                <h3>Subtemas</h3>
+                <ul>
+                    <li>2.1 Características de los conjuntos y subconjuntos
+                    </li>
+                    <li>2.2 Operaciones con conjuntos
+                    </li>
+                    <li>2.3 Propiedades y aplicaciones de los conjuntos
+                    </li>
+                    <li>2.4 Conceptos básicos: producto cartesiano y relación binaria
+                    </li>
+                    <li>2.5 Representación de las relaciones
+                    </li>
+                    <li>2.6 Propiedades de las relaciones
+                    </li>
+                    <li>2.7 Relaciones de equivalencia
+                    </li>
+                    <li>2.8 Funciones
+                    </li>
+                    <li>2.9 Aplicaciones de las relaciones y las funciones en la computación</li>
+                </ul>
+
+                <p></p>
+                <h3>Competencia Específica</h3>
+                <p>Conoce y aplica las operaciones y propiedades de los conjuntos y relaciones para la resolución de
+                    problemas reales.
+                </p>
+                <h3>Competencias Genéricas</h3>
+                <p>
+                </p>
+                <ul>
+                    <li> Capacidad de abstracción, análisis y síntesis
+                    </li>
+                    <li>Capacidad de aplicar los conocimientos en la práctica
+                    </li>
+                    <li>Conocimientos sobre el área de estudio y la profesión
+                    </li>
+                    <li>Capacidad de comunicación oral y escrita
+                    </li>
+                    <li>Capacidad de investigación
+                    </li>
+                    <li>Habilidades para buscar, procesar y analizar información procedente de fuentes diversas
+                    </li>
+                    <li>Capacidad de trabajo en equipo
+
+                    </li>
+                </ul>
+                <h3>Actividades de aprendizaje</h3>
+                <ul>
+                    <li>Investigar la definición, desarrollo histórico,
+                        características y propiedades de los conjuntos,
+                        operaciones entre conjuntos y aplicación de
+                        los conjuntos.
+                    </li>
+                    <li>Elaborar un mapa conceptual donde se
+                        represente el producto de la investigación
+                        realizada.
+                    </li>
+                    <li>Representar información del ambiente
+                        cotidiano utilizando conjuntos, resolver
+                        problemas con las operaciones de conjuntos
+                        (unión, conjunción, complemento, diferencias,
+                        conjunto potencia).
+                    </li>
+                    <li>Investigar la representación de conjuntos y sus
+                        operaciones mediante Diagramas de Venn, en
+                        grupos de trabajo resolver problemas que
+                        muestren esta técnica, como una manera de
+                        ilustrar y comprender mejor la operación entre
+                        conjuntos.
+                    </li>
+                    <li>Elaborar una lista de aplicaciones de los
+                        conjuntos en el área de la computación.
+                    </li>
+                    <li>Investigar los conceptos de: producto
+                        cartesiano, relación y relación binaria.
+                    </li>
+                    <li>Utilizando conjuntos, matrices y diagramas de
+                        flechas presentar ejemplos de relaciones.
+                    </li>
+                    <li>Resolver ejercicios de las operaciones que
+                        pueden realizarse entre relaciones (unión,
+                        intersección, complemento, inversa y
+                        composición).
+                    </li>
+                    <li>Construir ejemplos de manera individual que
+                        presente las propiedades de una relación
+                        usando su definición formal.
+                    </li>
+                    <li>Resolver ejercicios donde una relación que no
+                        tenga la propiedad de equivalencia, adquiera
+                        está aplicando las cerraduras reflexiva,
+                        simétrica y transitiva.
+                    </li>
+                    <li>Determinar cuándo una relación sea de orden
+                        parcial y determinar el diagrama de Hasse de
+                        dicha relación.
+                    </li>
+                    <li>Realizar un cuadro comparativo entre una
+                        relación de equivalencia y una de orden
+                        parcial, identificando sus coincidencias y
+                        diferencias.
+                    </li>
+                    <li>Elaborar un resumen con las aplicaciones de
+                        las relaciones de equivalencia y orden parcial
+                        en las ciencias computacionales.
+                    </li>
+                    <li>Analizar los diferentes tipos de funciones
+                        (inyectiva, suprayectiva, biyectiva).
+                    </li>
+                    <li>Presentar ejemplos del ambiente cotidiano
+                        donde se muestre el comportamiento de estas
+                        funciones, representar gráficamente los
+                        resultados.</li>
+                </ul>
+                <h3>Material</h3>
+                <ul>
+                    <li></li>
+                </ul>
+            </div>
+            <div>
+                <h2>Tema 3: Lógica matemática</h2>
+                <h3>Subtemas</h3>
+                <ul>
+                    <li>3.1 Lógica proposicional
+                        <ul>
+                            <li>3.1.1 Proposiciones simples y compuestas
+                            </li>
+                            <li>3.1.2 Tablas de verdad
+                            </li>
+                            <li>3.1.3 Tautologías, contradicción ycontingencia
+                            </li>
+                            <li>3.1.4 Equivalencias lógicas
+                            </li>
+                            <li>3.1.5 Reglas de inferencia
+                            </li>
+                            <li>3.1.6 Argumentos válidos y no validos
+                            </li>
+                            <li>3.1.7 Demostración formal
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>3.2 Lógica de predicados
+                        <ul>
+                            <li>3.2.1 Cuantificadores
+                            </li>
+                            <li>3.2.2 Representación y evaluación de predicados
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>3.3 Algebra declarativa
+                    </li>
+                    <li>3.4 Inducción matemática
+                    </li>
+                    <li>3.5 Aplicaciones de la lógica matemática en la computación</li>
+                </ul>
+
+                <p></p>
+                <h3>Competencia Específica</h3>
+                <p>Analiza y resuelve problemas computacionales utilizando las técnicas básicas de lógica e inducción
+                    matemática.
+                </p>
+                <h3>Competencias Genéricas</h3>
+                <p>
+                </p>
+                <ul>
+                    <li>
+                        Capacidad de abstracción, análisis y síntesis
+                    </li>
+                    <li>Capacidad de aplicar los conocimientos en la práctica
+                    </li>
+                    <li>Conocimientos sobre el área de estudio y la profesión
+                    </li>
+                    <li>Capacidad de comunicación oral y escrita
+                    </li>
+                    <li>Capacidad de investigación
+                    </li>
+                    <li>Habilidades para buscar, procesar y analizar información procedente de fuentes diversas
+                    </li>
+                    <li>Capacidad de trabajo en equipo
+                    </li>
+                </ul>
+                <h3>Actividades de aprendizaje</h3>
+                <ul>
+                    <li>Investigar el concepto de argumento,
+                        proposición y proposición lógica.
+                    </li>
+                    <li>Presentar ejemplos de proposiciones lógicas.
+                    </li>
+                    <li>Elaborar un esquema con los tipos de
+                        conexiones lógicas, su representación y tabla
+                        de verdad.
+                    </li>
+                    <li>Representar enunciados usando para ello
+                        notación lógica.
+                    </li>
+                    <li>Analizar ejemplos de evaluación de
+                        proposiciones lógicas compuestas mediante
+                        tablas de verdad.
+                    </li>
+                    <li>Construir la tabla de verdad de proposiciones
+                        lógicas compuestas propuestas como
+                        ejercicios.
+                    </li>
+                    <li>Usar una herramienta computacional para
+                        desarrollar un método que permita elaborar
+                        tablas de verdad de proposiciones compuestas.
+                    </li>
+                    <li>Identificar cuando una proposición es una
+                        tautología, contradicción y contingencia.
+                    </li>
+                    <li>Obtener por medio de tablas de verdad
+                        proposiciones lógicamente equivalentes,
+                        tautologías, reglas de inferencia lógica,
+                        discutir los resultados en grupos de trabajo.
+                    </li>
+                    <li>Investigar que es la inferencia lógica, sus
+                        silogismos y equivalencias lógicas y discutir
+                        en plenaria la información localizada para
+                        obtener conclusiones.
+                    </li>
+                    <li>Resolver un problema de argumentos válidos
+                        y no válidos para determinar cuándo un
+                        argumento es válido o no, usando para ello
+                        tablas de verdad y reglas de inferencia.
+                    </li>
+                    <li>Desarrollar ejercicios para la construcción de
+                        demostraciones formales utilizando
+                        silogismos.
+                    </li>
+                    <li>Demostrar que dos proposiciones son
+                        lógicamente equivalentes apoyándose en las
+                        equivalencias lógicas.
+                    </li>
+                    <li>Demostrar la validez de un teorema usando
+                        para ello la demostración formal por el método
+                        directo y el método por contradicción,
+                        apoyándose en tautologías, reglas de
+                        inferencia y equivalencias lógicas conocidas.
+                    </li>
+                    <li>Representar enunciados usando para ello la
+                        lógica de predicados, operadores lógicos y
+                        cuantificadores.
+                    </li>
+                    <li>Investigar el concepto de inducción
+                        matemática y el método de demostración por
+                        inducción.
+                    </li>
+                    <li>Analizar en grupos de trabajo el proceso de
+                        resolución de problemas por el método
+                        inductivo.
+                    </li>
+                    <li>Elaborar una lista de aplicaciones de la lógica
+                        matemática en la computación, justificando
+                        con argumentos válidos cada una de esas
+                        aplicaciones.
+                    </li>
+                    <li>Elaborar un resumen individual donde se
+                        explique la relación que existe entre los
+                        elementos y conceptos de la lógica
+                        proposicional, de predicados, el álgebra
+                        declarativa y la inducción matemática.</li>
+
+                </ul>
+                <h3>Material</h3>
+                <ul>
+                    <li></li>
+                </ul>
+            </div>
+            <div>
+                <h2>Tema 4: Algebra booleana</h2>
+                <h3>Subtemas</h3>
+                <ul>
+
+                    <li>4.1 Teoremas y postulados
+                    </li>
+                    <li>4.2 Optimización de expresiones booleanas
+                    </li>
+                    <li>4.3 Aplicación del algebra booleana
+                        <ul>
+                            <li>4.3.1 Mini y maxi términos
+                            </li>
+                            <li>4.3.2 Representación de expresiones booleanas con circuitos lógicos</li>
+                        </ul>
+                    </li>
+
+                </ul>
+
+                <p></p>
+                <h3>Competencia Específica</h3>
+                <p>Aplica los conceptos y propiedades del álgebra booleana, para optimizar expresiones booleanas y
+                    diseñar circuitos
+                    básicos con compuertas lógicas.
+                </p>
+                <h3>Competencias Genéricas</h3>
+                <p>
+                </p>
+                <ul>
+                    <li>Capacidad de abstracción, análisis y síntesis.
+                    </li>
+                    <li>Capacidad de aplicar los conocimientos en la práctica.
+                    </li>
+                    <li>Conocimientos sobre el área de estudio y la profesión.
+                    </li>
+                    <li>Capacidad de comunicación oral y escrita.
+                    </li>
+                    <li>Habilidades para buscar, procesar y analizar información procedente de fuentes diversas.
+                    </li>
+                    <li>Capacidad de trabajo en equipo.
+                    </li>
+                    <li>Capacidad de investigación.
+                    </li>
+                    <li>Habilidades en el uso de las tecnologías de la información y de la comunicación.d para buscar y
+                        analizar
+                        información proveniente de fuentes diversas.
+
+                    </li>
+                </ul>
+                <h3>Actividades de aprendizaje</h3>
+                <ul>
+                    <li>Investigar en grupos de trabajo el concepto,
+                        historia, postulados y propiedades del álgebra
+                        booleana.
+                    </li>
+                    <li>En reunión plenaria, discutir el material
+                        investigado y llegar a una conclusión grupal.
+                    </li>
+                    <li>Elaborar un mapa conceptual de los conceptos de algebra booleana, las operaciones que se
+                        utilizan y las propiedades.
+                    </li>
+                    <li>Resolver problemas de representación de
+                        expresiones booleanas usando para ello
+                        compuertas básicas (and, or, not y x-or).
+                    </li>
+                    <li>Obtener expresiones booleanas a partir de una
+                        tabla de verdad que muestre todos los posibles
+                        valores de un sistema lógico.
+                    </li>
+                    <li>Usar software para representar expresiones
+                        booleanas por medio de compuertas lógicas.
+                    </li>
+                    <li>Simplificar expresiones booleanas usando para
+                        ello teoremas del álgebra booleana.
+                    </li>
+                    <li>Desarrollar ejercicios de optimización de
+                        expresiones booleanas, aplicando las
+                        propiedades del algebra booleana.
+                    </li>
+                    <li>Resolver problemas para obtener la expresión
+                        equivalente simplificada a partir de un circuito
+                        lógico (mapas de Karnaugh).
+                    </li>
+                    <li>Construir circuitos lógicos utilizando
+                        compuertas lógicas.</li>
+                </ul>
+                <h3>Material</h3>
+                <ul>
+                    <li></li>
+                </ul>
+            </div>
+            <div>
+                <h2>Tema 5: Teoría de grafos</h2>
+                <h3>Subtemas</h3>
+                <ul>
+                    <li>5.1 Elementos, características y componentes de los grafos.
+                        <ul>
+                            <li>5.1.1 Tipos de grafos
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>5.2 Representación de los grafos.
+                        <ul>
+                            <li>5.2.1 Matemática
+                            </li>
+                            <li>5.2.2 Computacional
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>5.3 Algoritmos de recorrido y búsqueda.
+                        <ul>
+                            <li>5.3.1 El camino más corto
+                            </li>
+                            <li>5.3.2 A lo ancho
+                            </li>
+                            <li>5.3.3 En profundidad</li>
+                        </ul>
+                    </li>
+
+                </ul>
+
+                <p></p>
+                <h3>Competencia Específica</h3>
+                <p>Aplica los conceptos básicos de grafos para resolver problemas afines al área computacional,
+                    relacionados con el
+                    recorrido, búsqueda y ordenamiento en grafos.</p>
+                <h3>Competencias Genéricas</h3>
+                <p>
+                </p>
+                <ul>
+                    <li>Capacidad de aplicar los conocimientos en la práctica.
+                    </li>
+                    <li>Conocimientos sobre el área de estudio y la profesión.
+                    </li>
+                    <li>Capacidad de comunicación oral y escrita.
+                    </li>
+                    <li>Habilidades para buscar, procesar y analizar información procedente de fuentes diversas.
+                    </li>
+                    <li>Capacidad de trabajo en equipo.
+                    </li>
+                    <li>Capacidad para organizar y planificar el tiempo.
+                    </li>
+                    <li>Capacidad de investigación.
+                    </li>
+                    <li>Habilidades en el uso de las tecnologías de la información y de la comunicación.
+                    </li>
+                </ul>
+
+
+                <h3>Actividades de aprendizaje</h3>
+                <p>
+                </p>
+                <ul>
+                    <li>Investigar los elementos y características de
+                        los grafos (vértice, arista, lazos, valencias,
+                        caminos)
+                    </li>
+                    <li>Elaborar una presentación electrónica donde
+                        se identifiquen los conceptos básicos
+                        investigados.
+                    </li>
+                    <li>Construir un esquema donde se muestren los
+                        diferentes tipos de grafos, sus características y
+                        ejemplos de cada uno de ellos.
+                    </li>
+                    <li>Investigar y realizar un reporte cómo se
+                        representan los grafos utilizando matrices,
+                        identificar las razones por las cuales se utilizan
+                        cada una de las representaciones y cuál es la
+                        más adecuada para su manejo en la
+                        computadora.
+                    </li>
+                    <li>Investigar los diferentes algoritmos para el
+                        cálculo del número de caminos en un grafo,
+                        así como el camino más corto, analizar sus
+                        características y determinar cuál es el más
+                        óptimo.
+                    </li>
+                    <li>Investigar cuales son las estrategias y
+                        algoritmos de búsqueda existentes, analizar los
+                        resultados en grupos de trabajo y presentar por escrito un resumen
+                    </li>
+                    <li>Realizar ejercicios de grafos en la que se
+                        aplique búsqueda de información a lo ancho y
+                        en profundidad.
+                    </li>
+                    <li>Usar software para determinar características,
+                        propiedades y recorridos en grafos.</li>
+
+                </ul>
+
+                <h3>Material</h3>
+
+
+                <ul>
+                    <li>
+                        <a target="_blank"
+                            href="https://aprende.olimpiada-informatica.org/algoritmia-grafos">Vocabulario Teoría de
+                            Grafos</a>
+                    </li>
+                    <li>
+                        <a target="_blank"
+                            href="http://ocw.uc3m.es/ingenieria-informatica/estructura-datos-algoritmos/material-de-clase-1/Tema6Grafos.pdf">Grafos</a>
+                    </li>
+
+                    <li>
+                        <a target="_blank"
+                            href="https://www.grapheverywhere.com/herramientas-de-visualizacion-de-grafos/">herramientas
+                            de visualización de grafos</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://pages.github.com/">GitHub Pages</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://codesandbox.io/s/new">Codesandbox (Entorno virtual de
+                            desarrollo)</a>
+                    </li>
+                </ul>
+            </div>
+
+
+
+            <div>
+                <h2>Tema 6: Árboles y redes</h3>
+                    <ul>
+                        <li>6.1 Arboles.
+                            <ul>
+                                <li>6.1.1 Componentes y propiedades
+                                </li>
+                                <li>6.1.2 Clasificación por altura y número de nodos
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>6.2. Árboles con peso
+                            <ul>
+                                <li>6.2.1 Recorrido de un árbol
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>6.3 Redes.
+                            <ul>
+                                <li>6.3.1 Teorema de flujo máximo
+                                </li>
+                                <li>6.3.2 Teorema de flujo mínimo
+                                </li>
+                                <li>6.3.3 Pareos y redes de Petri</li>
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                    <p></p>
+                    <h3>Competencia Específica</h3>
+                    <p>Aplica la organización y relación entre los datos mediante procesos de ordenamiento, para
+                        resolver
+                        problemas de
+                        programación matemática donde se hace uso de las redes.
+                    </p>
+                    <h3>Competencias Genéricas</h3>
+                    <p>
+                    </p>
+                    <ul>
+                        <li>Capacidad de análisis y síntesis
+                        </li>
+                        <li>
+
+                        </li>
+                        <li>Capacidad de abstracción, análisis y síntesis
+                        </li>
+                        <li>Capacidad de aplicar los conocimientos en la práctica
+                        </li>
+                        <li>Capacidad de comunicación oral y escrita
+                        </li>
+                        <li>Habilidades para buscar, procesar y analizar información procedente de fuentes diversas
+                        </li>
+                        <li>Habilidades en el uso de las tecnologías de la información y de la comunicación
+                        </li>
+                        <li>Capacidad de trabajo en equipo
+                        </li>
+                    </ul>
+                    <h3>Actividades de aprendizaje</h3>
+                    <p></p>
+                    <ul>
+                        <li>Elaborar una presentación electrónica con los
+                            conceptos básicos de árboles y sus
+                            propiedades.
+                        </li>
+                        <li>Diferenciar los conceptos entre un grafo y un
+                            árbol.
+                        </li>
+                        <li>Analizar en grupos de trabajo la clasificación
+                            de los árboles, presentar un resumen de
+                            resultados.
+                        </li>
+                        <li>Investigar los procedimientos para realizar el
+                            recorrido de un árbol, así como el
+                            ordenamiento y la búsqueda de los elementos.
+                        </li>
+                        <li>Resolver ejercicios para el recorrido de árboles
+                            en preorden, inorden y postorden.
+                        </li>
+                        <li>Investigar las aplicaciones de los recorridos de
+                            árboles en el área de las ciencias
+                            computacionales.
+                        </li>
+                        <li>Estructurar la información en un árbol para
+                            llevar a cabo evaluación de ecuaciones
+                            matemáticas y ordenamiento de información
+                            por medio de sus diferentes recorridos.
+                        </li>
+                        <li>Resolver ejercicios de búsqueda a lo ancho y
+                            en profundidad, así como el ordenamiento de
+                            información utilizando árboles.
+                        </li>
+                        <li>Realizar la decodificación de información por
+                            medio del método de Huffman.
+                        </li>
+                        <li>Realizar un mapa mental para realizar la
+                            aplicación de flujo máximo, flujo mínimo y
+                            pareos.
+                        </li>
+                        <li>Resolver ejercicios planteado por el profesor
+                            donde se apliquen los conceptos de flujo
+                            máximo, flujo mínimo, Pareos y Redes de
+                            Petri.</li>
+                    </ul>
+
+                    <h3>Material</h3>
+                    <ul>
+                        <li><a target="_blank"
+                                href="http://ocw.uc3m.es/ingenieria-informatica/estructura-datos-algoritmos/material-de-clase-1/Tema5.1ARBOLESINTRO.pdf">Árboles</a>
+                        </li>
+                        <li><a target="_blank"
+                                href="https://aprende.olimpiada-informatica.org/algoritmia-grafos">Vocabulario Teoría de
+                                Grafos</a></li>
+                        <li><a target="_blank"
+                                href="https://runestone.academy/runestone/static/pythoned/Trees/RecorridosDeArboles.html">Recorridos
+                                de
+                                árboles</a></li>
+                        <li><a target="_blank"
+                                href="https://drive.google.com/file/d/1X7UCxseOyWGZ-vsrahjCgzhsgPdcvuB8/view?usp=sharing">Clase
+                                Árboles</a>
+                        </li>
+                    </ul>
+            </div>
+
+
+
+        </div>
+        <div name="practicas">
+            <h1>8.- Prácticas</h1>
+            <ul>
+                <li>Elaborar a través de una hoja electrónica de cálculo un proceso para la conversión y realización
+                    de operaciones aritméticas básicas de cantidades en diferentes bases numéricas.
+                </li>
+                <li>Buscar en Internet software que permita llevar a cabo ejercicios de conversión, operaciones
+                    matemáticas básicas (suma, resta, multiplicación y división) en diferentes sistemas numéricos,
+                    utilizarlo para resolver problemas planteados en clase.
+                </li>
+                <li>Utilizando herramientas computacionales disponibles para el estudiante, representar el
+                    comportamiento de las operaciones con conjuntos mediante diagramas de Venn.
+                </li>
+                <li>Elaborar, con ayuda de una hoja electrónica de cálculo, un proceso para llevar a cabo la
+                    evaluación de una proposición compuesta mediante tablas de verdad.
+                </li>
+                <li>Utilizando un simulador, verificar el comportamiento de una expresión proposicional.
+                </li>
+                <li>Utilización de diagramas de Venn para la determinación de razonamiento.
+                </li>
+                <li>Construir un circuito usando compuertas lógicas, implementarlas utilizando software para la
+                    construcción de circuitos electrónicos.
+                </li>
+                <li>Utilizando software disponible para el estudiante, determinar las propiedades de una relación,
+                    aplicar cerraduras para lograr que una relación sea de equivalencia y determinar el diagrama de
+                    Hasse de relaciones de orden parcial.
+                </li>
+                <li>Representar un grafo utilizando una hoja electrónica de cálculo, y obtener el número de caminos
+                    de longitud n mediante el cálculo correspondiente.
+                    </li>
+                <li> Mediante software disponible para el estudiante, determinar características, propiedades y
+                    recorridos importantes en un grafo.
+                    </li>
+                <li> Realizar el recorrido de un árbol que represente una expresión matemática y obtener su valor
+                    usando para ello el concepto de pila para almacenar resultados.
+                    </li>
+                <li> Crear un árbol binario a partir de una lista de números aleatorios y llevar a cabo búsquedas y
+                    ordenamiento de dichos datos.
+                </li>
+                <li>Usar software disponible para el estudiante, con el cual se simule el recorrido, búsqueda de
+                    información, representación y evaluación de un árbol.</li>
+
+            </ul>
+            </p>
+            <h1>9.- Proyecto de asignatura</h1>
+            <p> El objetivo del proyecto que planteé el docente que imparta esta asignatura, es demostrar el desarrollo
+                y
+                alcance de la(s) competencia(s) de la asignatura, considerando las siguientes fases:
+                <br><b>Fundamentación</b>: marco referencial (teórico, conceptual, contextual y legal) en el cual se
+                fundamenta el proyecto de acuerdo con un diagnóstico realizado, mismo que permite a los
+                estudiantes lograr la comprensión de la realidad o situación objeto de estudio para definir un
+                proceso de intervención o hacer el diseño de un modelo.
+                <br><b>Planeación</b>: con base en el diagnóstico en esta fase se realiza el diseño del
+                proyecto
+                por parte de
+                los estudiantes con asesoría del docente; implica planificar un proceso: de intervención empresarial,
+                social o comunitario, el diseño de un modelo, entre otros, según el tipo de proyecto, las actividades
+                a realizar los recursos requeridos y el cronograma de trabajo.
+                <br><b>Ejecución</b>: consiste en el desarrollo de la planeación del proyecto realizada por
+                parte
+                de los
+                estudiantes con asesoría del docente, es decir en la intervención (social, empresarial), o
+                construcción del modelo propuesto según el tipo de proyecto, es la fase de mayor duración que
+                implica el desempeño de las competencias genéricas y especificas a desarrollar.
+                <br><b>Evaluación</b>: es la fase final que aplica un juicio de valor en el contexto
+                laboral-profesión, social e
+                investigativo, ésta se debe realizar a través del reconocimiento de logros y aspectos a mejorar se
+                estará promoviendo el concepto de “evaluación para la mejora continua”, la metacognición, el
+                desarrollo del pensamiento crítico y reflexivo en los estudiantes.
+            </p>
+            <h1>10.- Evaluación por competencias (específicas y genéricas de la asignatura)</h1>
+            <p> Para evaluar las actividades de aprendizaje se recomienda solicitar: mapas conceptuales, reportes de
+                investigación, exposiciones en clase, problemario, portafolio de evidencias, tablas comparativas,
+                glosarios, entre otros. <br>
+                Para verificar el nivel del logro de las competencias del estudiante se recomienda utilizar: listas de
+                cotejo, listas de verificación, matrices de valoración, rúbricas, entre otros, mediante la
+                heteroevaluación, coevaluación y autoevaluación.</p>
+            <h1>11.- Fuentes de información </h1>
+            <p>
+            <ul>
+                <li>1 Aho, Alfred; Ullman, Jeffrey. (1996) Foundations of Computer Sciences. Editorial W. H. Freeman.
+                </li>
+                <li> 2 Anderson, James. (2001). Discrete Mathematics with Combinatorics. Prentice Hall.
+                </li>
+                <li> 3 Anderson, Ian. First Course in Discrete Mathematics. Springer.
+                </li>
+                <li> 4 Baase, Sara. (1998). Computer Algorithms. Addison Wesley.Graham, Knuth,
+                </li>
+                <li> 5 Brookshear, J. Glenn. (1993). “Teoría de la computación”. USA: Addison-Wesley/Iberoaméricana.
+                </li>
+                <li> 6 García Valle, J. Luis. (1993). “Matemáticas especiales para computación”. México: McGraw-Hill.
+                </li>
+                <li> 7 Grassmann, Winfried Karl. Tremblay, Jean-Paul. (1997). “Matemática Discreta y Lógica, una
+                    perspectiva desde la ciencia de la computación”. España: Prentice Hall. España.
+                </li>
+                <li> 8 Grimaldi y Ralph P. (1998). “Matemáticas discreta y combinatoria” (3ra. Ed.). México: Pearson
+                    Educación.
+                </li>
+                <li> 9 Jiménez, J. (2008). “Matemáticas para la computación”. (1ra. Ed.). México: Alfaomega.
+                </li>
+                <li> 10 Johnsonbaugh, R. (2005). “Matemáticas Discretas”. (6ta. Ed.). México: Pearson Educación.
+                </li>
+                <li> 11 Rosen, H. (2004). “Matemática Discreta y sus aplicaciones". (5ta. Ed.). Edición. España: McGraw-
+                    Hill.
+                </li>
+                <li> 12 Ross, Kenneth, A. y Wright, R. (2003). “Discrete mathematics”. (5ta. Ed.). U.S.A.:Pearson
+                    Education.
+                </li>
+                <li> 13 Skreeumar, D. (2005). “Fundamental Approach to Discrete Mathematics”. USA : New Age
+                    International Publisher.
+                </li>
+                <li> 14 Suppes, P. y Hill, S. (2008). “Primer Curso de Lógica Matemática”. (3ra. Ed.). España: Reverté.
+                </li>
+                <li> 15 Tremblay, J. (1996). “Matemáticas discretas. Con aplicación a las ciencias de la computación”.
+                    México: CECSA.
+                </li>
+                <li> 16 Barceló, A. (2007). ¿Qué tan matemática es la lógica matemática? Disponible desde Internet en:
+                    http://dianoia.filosoficas.unam.mx/info/2003/d51-Barcelo.pdf [con acceso el 1 de Febrero de 2010]
+                </li>
+                <li> 17 Universidad Autónoma de México.( 2006) Matemáticas IV (Matemáticas Discretas). México.
+                    Disponible desde Internet en: <a
+                        href="http://fcaenlinea.unam.mx/apuntes/interiores/docs/98/6/mate_4.pdf">http://fcaenlinea.unam.mx/apuntes/interiores/docs/98/6/mate_4.pdf</a>
+                    [Con acceso el 4 de enero de 2010].
+                </li>
+                <li> 18 Instituto Tecnológico de Buenos Aires.( 2001) Matemática Discreta. Argentina. [Web en línea].
+                    [con acceso el 8 de enero de 2010] http://www.allaboutcircuits.com/ Fecha desconocida. All About
+                    Circuits. USA [Web en línea]. [con acceso el 8 de enero de 2010].
+
+                </li>
+            </ul>
+            </p>
+        </div>
+    </div>
+
+</body>
+
+</html>

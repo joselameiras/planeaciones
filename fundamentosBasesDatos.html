@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Fundamentos de Base de Datos</title>
+</head>
+
+<body>
+    <div class="container">
+        <div name="Datos Generales">
+            <h1>Datos generales de la asignatura</h1>
+            <p> <b>Nombre de la asignatura: </b> Fundamentos de Base de Datos <br> <b>Clave de la asignatura: </b>
+                AEF-1031 <br> <b title="Sistema de Asignación y Transferencia de Créditos Académicos">SATCA*: </b> 3-2-5
+            </p>
+
+            <h1>Presentación</h1>
+            <h2>Caracterización de la asignatura</h2>
+            <p> Esta asignatura aporta al perfil del egresado la capacidad para analizar, diseñar y gestionar sistemas
+                de bases de datos conforme a los requerimientos del entorno para garantizar la integridad,
+                disponibilidad y confidencialidad de la información, así como para desarrollar e implementar sistemas de
+                información para la gestión de procesos y apoyo en la toma de decisiones, utilizando metodologías
+                basadas en estándares internacionales. <br>Es importante porque el estudiante adquiere las competencias
+                en el análisis y el diseño de base de datos, que le permitirán desarrollar aplicaciones para sistemas de
+                información robustos que ofrezcan garantía en el manejo de la información. Es conveniente mencionar que
+                hoy en día la información forma parte del capital intangible de las organizaciones y cada vez se
+                demandan sistemas de información que garanticen la integridad y seguridad de la misma. <br>La asignatura
+                propicia el dominio de modelos de diseño de base de datos basados en reglas de normalización, de
+                integridad y de seguridad. <br>Esta asignatura requiere como competencia previa que el estudiante
+                comprenda y aplique los conceptos y propiedades de álgebra de conjuntos, relaciones y álgebra booleana
+                adquiridas en matemáticas discretas. Se relaciona con asignaturas posteriores donde se apliquen bases de
+                datos y desarrollen aplicaciones para el tratamiento de información.
+
+            </p>
+
+            <h2>Intención didactica</h2>
+            <p> El programa de la asignatura se organiza en seis temas, en los cuales se incluyen aspectos teóricos y de
+                aplicación relacionados con modelado lógico de base de datos y lenguajes de acceso a base de datos.
+                <br>El <b>tema uno</b> proporciona al estudiante el sustento teórico de las bases de datos, como son los
+                objetivos, los diferentes modelos, la clasificación, las áreas de aplicación y arquitecturas que sirven
+                de fundamento para que el estudiante incursione en el área de conocimiento de base de datos. Se
+                recomienda que, en el tema de Arquitectura de la base de datos, se aborden los temas de niveles de
+                abstracción, tipos de usuarios y tipos de lenguajes. <br>En el <b>tema dos</b> se estudia el proceso de
+                diseño conceptual de las bases de datos aplicando el modelo Entidad – Relación (E-R), como una
+                herramienta para modelar los esquemas en una forma consistente y estandarizada. El docente debe promover
+                que el estudiante elija problemas reales y efectúe un análisis de las reglas de negocio antes de
+                elaborar los diagramas E-R. <br>La mayoría de los sistemas gestores de bases de datos (SGBD) están
+                basados en el modelo relacional, por lo que en el <b>tema tres</b>, se aborda este modelo, en el que se
+                conoce y comprende su estructura, elementos que lo conforman y sus reglas de integridad. El docente
+                deberá propiciar que el estudiante identifique la relación que existe entre el modelo E-R y el modelo
+                relacional. <br>En el <b>tema cuatro</b> se estudian las formas normales de base de datos que garantizan
+                la integridad de la base de datos y evitan la redundancia de información, contando con la posibilidad de
+                ahondar en otras formas normales como la cuarta y quinta. Se recomienda que el docente proponga ejemplos
+                de entidades para aplicar las reglas de normalización y demostrar claramente la diferencia o diferencias
+                de entidades no normalizadas y normalizadas. <br>En el <b>tema cinco</b> se conoce y comprende el uso y
+                aplicación del álgebra relacional como lenguaje de consulta formal a base de datos, los operadores
+                básicos y los operadores del álgebra relacional extendida. Se sugiere que el docente realice
+                planteamientos de consulta a base de datos. <br>El <b>tema seis</b> contempla aplicar los comandos
+                básicos del Lenguaje de Definición y de Manipulación de Datos, haciendo uso de las herramientas del
+                Sistema Gestor de Base de Datos, entre los cuales se deben considerar la creación de base de datos,
+                creación de tablas y definición de llaves primarias y foráneas, la manipulación y consulta de la base de
+                datos por medio de las operaciones de inserción, eliminación, modificación y consulta de datos. Es
+                importante que el profesor aborde este tema a nivel básico, ya que en la asignatura de Taller de Base de
+                Datos se dará profundidad en la definición, manipulación y control de la base de datos. <br>Es relevante
+                que el docente a partir del tema 2, trabaje con los estudiantes en la identificación de un problema real
+                y promueva la aplicación gradual de las competencias adquiridas en cada tema, logrando integrar un
+                proyecto de asignatura. Esto propicia que el estudiante desarrolle las competencias genéricas para el
+                análisis y resolución de problemas reales y aplique los conocimientos en la práctica. <br>Se deben
+                promover las actividades de investigación y exposición con la intención de desarrollar competencias
+                genéricas como la capacidad de análisis y síntesis y la expresión oral. <br>El docente debe en todo
+                momento desempeñar el papel de guía, con la finalidad de generar un ambiente propicio de aprendizaje.
+
+            </p>
+            <h1>Competencia a desarrollar</h1>
+
+            <p>
+            <ul>
+                <li> Analiza requerimientos y diseña bases de datos para generar soluciones al tratamiento de
+                    información basándose en modelos y estándares.</li>
+            </ul>
+            </p>
+            <h1>Competencias previas</h1>
+
+            <p>
+            <ul>
+                <li>Comprende y aplica los conceptos básicos de lógica matemática, conjuntos y relaciones para
+                    aplicarlos en modelos que resuelvan problemas computacionales</li>
+            </ul>
+
+            </p>
+
+            <h1>Fuentes de información</h1>
+            <ul>
+                <li>1. Korth, H. y Silbertchatz, A. Fundamentos de Bases de datos. (5ª ed.). Ed. McGraw Hill.
+                </li>
+                <li>2. De Miguel, A. y Piattini, M. Fundamentos y modelos de bases de datos. (2ª ed.), Ed. Alfa-
+                    Omega Ramma.
+                </li>
+                <li> 3. Rob, P. y Coronel, C. Sistemas de Base de Datos (Diseño, Implementación y Administración).
+                    (5ª ed.).Ed. Thomson.
+                </li>
+                <li> 4. Kroenke, D. Procesamiento de Base de Datos –Fundamentos, diseño e
+                </li>
+                <li> 5. implementación-.( 8ª ed). Ed. Pearson Prentice-Hall.
+                </li>
+                <li> 6. De Miguel, S. et al. Diseño de Base de datos –Problemas resueltos-. Ed.
+                </li>
+                <li> 7. Alfaomega & Ra-ma.
+                </li>
+                <li> 8. Groff, J. y Weinberg, P. Manual de referencia SQL. Ed. McGraw Hill.
+                </li>
+                <li> 9. Date, C. (2012) Introduction to Data Base Systems (7ª Ed.) Ed. Addison – Wesley
+                    Iberoamericana.
+                </li>
+                <li> 10. De Miguel, S. y Piattini, M. Concepción y Diseño de Base de datos –Del modelo E-R al modelo
+                    relacional. Ed. Addison Wesley Iberoamericana, Ra-ma.</li>
+            </ul>
+
+        </div>
+
+
+        <div name="Temas">
+            <h1>Temas</h1>
+            <div>
+                <h2>Tema 1: Introducción a las bases de datos</h2>
+                <h3>Subtemas</h3>
+                <ul>
+                    <li>1.1 Conceptos básicos </li>
+                    <li>1.2 Objetivos de las Bases de Datos </li>
+                    <li>1.3 Áreas de Aplicación de los Sistemas de Bases de datos </li>
+                    <li>1.4 Modelos de bases de datos </li>
+                    <li>1.5 Clasificación de Bases de Datos </li>
+                    <li>1.6 Arquitectura de base de datos </li>
+                    <li> 1.7 Arquitectura del SGBD</li>
+                </ul>
+                <h3>Competencia Específica</h3>
+                <ul>
+                    <li> Conoce y comprende los conceptos básicos de base de datos para proponer soluciones en el
+                        tratamiento de información.</li>
+                </ul>
+                <h3>Competencias genéricas</h3>
+                <ul>
+                    <li>Habilidades para buscar, procesar y analizar información procedente de diversas fuentes. </li>
+                    <li>Capacidad de abstracción, análisis y síntesis </li>
+                    <li>Capacidad de comunicación oral y escrita </li>
+                </ul>
+                <h3>Actividades de aprendizaje</h3>
+                <ul>
+                    <li>Investigar los conceptos fundamentales, objetivos, usos y aplicaciones de las bases de datos y
+                        elaborar un mapa conceptual. </li>
+                    <li>Identificar los modelos de base de datos a través de una investigación y elaborar una tabla
+                        comparativa que incluya su definición y representación de datos. </li>
+                    <li>Identificar la clasificación de bases de datos a través de una investigación y elaborar un
+                        cuadro sinóptico que incluya su definición y características. Presentarlo y exponerlo. </li>
+                    <li>Describir la arquitectura de base de datos y del sistema gestor de base de datos con base en el
+                        diagrama de arquitectura, analizarlo y discutirlo en grupo.</li>
+                </ul>
+                <h3>Material</h3>
+                <ul>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="p-5 mb-4 bg-light rounded-3">
+                <h2>Tema 2: Diseño de Bases de Datos con el modelo ER.</h2>
+                <h3>Subtemas</h3>
+                <ul>
+                    <li>2.1 El Proceso de Diseño </li>
+                    <li> 2.2 Modelo Entidad-Relación </li>
+                    <li> 2.3 Diseño con diagramas E-R </li>
+                    <li> 2.4 Modelo E-R extendido </li>
+                    <li> 2.5 La Notación E-R con UML. </li>
+                </ul>
+                <h3>Competencia Específica</h3>
+                <ul>
+                    <li>Conoce y aplica el modelo E-R para el diseño conceptual de bases de datos con el fin de
+                        organizar la información y atender necesidades del entorno. </li>
+                </ul>
+                <h3>Competencias genéricas</h3>
+                <ul>
+                    <li>Capacidad de abstracción, análisis y síntesis </li>
+                    <li>Capacidad de aplicar los conocimientos en la práctica </li>
+                    <li>Capacidad para identificar, plantear y resolver problemas </li>
+                    <li>Capacidad de trabajo en equipo </li>
+                </ul>
+                <h3>Actividades de aprendizaje</h3>
+                <ul>
+                    <li> Identificar los componentes del modelo ER
+                        y E-R extendido, sus restricciones de diseño, mediante una investigación y elaborar un reporte.
+                    </li>
+                    <li>Investigar diversas herramientas de software para el modelado de bases de datos que le permitan
+                        conocer y elegir una de ellas. </li>
+                    <li>Seleccionar ejemplos de aplicación del modelo E-R y E-R extendido, analizarlos en grupos de
+                        trabajo y exponerlos, haciendo uso de herramientas computacionales de diseño de base de datos
+                        disponibles. </li>
+                    <li>Analizar diversas situaciones del contexto y diseñar bases de datos con diagramas E-R. </li>
+                    <li>Elegir un problema del entorno, describirlo, identificar los objetos de información, relaciones
+                        entre ellos y diseñar la base de datos con el diagrama E-R, utilizando la notación básica y
+                        extendida según lo requiera el caso. </li>
+                    <li>Convertir el diagrama E-R construido a notación UML que le permita identificar las coincidencias
+                        entre los objetos de base de datos y las clases, objetos y relaciones de UML, para incursionarlo
+                        en el desarrollo de aplicaciones de software. Presentarlo y discutirlo en el grupo.</li>
+                </ul>
+                <h3>Material</h3>
+                <ul>
+                    <li></li>
+                </ul>
+
+            </div>
+            <div>
+                <h2>Tema 3: Modelo relacional</h2>
+                <h3>Subtemas</h3>
+                <ul>
+                    <li>3.1 Introducción al modelo relacional </li>
+                    <li> 3.2 Conversión de Modelo E-R a Modelo relacional </li>
+                    <li> 3.3 Esquema de la base de datos </li>
+                    <li> 3.4 Restricciones </li>
+                    <ul>
+                        <li> 3.4.1 Integridad de entidad </li>
+                        <li>3.4.2 Integridad referencial </li>
+                    </ul>
+                    <li>3.5 Integridad de dominio </li>
+                </ul>
+                <h3>Competencia Específica</h3>
+                <ul>
+                    <li>Conoce y aplica el modelo relacional para la generación de esquemas de base de datos con el fin
+                        de organizar la información y atender necesidades del entorno.</li>
+                </ul>
+                <h3>Competencias genéricas</h3>
+                <ul>
+                    <li>Capacidad de abstracción, análisis y síntesis </li>
+                    <li>Capacidad de aplicar los conocimientos en la práctica </li>
+                    <li>Capacidad para identificar, plantear y resolver problemas </li>
+                    <li> Capacidad de trabajo en equipo </li>
+                </ul>
+                <h3>Actividades de aprendizaje</h3>
+                <ul>
+                    <li>Identificar los componentes y las reglas de diseño de base de datos del modelo relacional
+                        mediante una investigación y elaborar un reporte. </li>
+                    <li>Analizar diversas situaciones del contexto, diseñar bases de datos y crear el esquema aplicando
+                        el modelo relacional. </li>
+                    <li>Convertir el diagrama E-R del problema planteado en el tema anterior a modelo relacional que le
+                        permita identificar las coincidencias entre los objetos de información de la base de datos en
+                        ambos modelos aplicando las reglas de diseño de base de datos. Presentarlo y discutirlo en el
+                        grupo. </li>
+                    <li>Crear el esquema de base de datos haciendo uso de las herramientas del gestor y generar el
+                        esquema de forma automática en la herramienta de modelado utilizada. Elaborar un reporte que
+                        incluya el diagrama conceptual de base de datos, el código y los comentarios que demuestren la
+                        interpretación lógica del esquema. </li>
+                </ul>
+                <h3>Material</h3>
+                <ul>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="p-5 mb-4 bg-light rounded-3">
+                <h2>Tema 4: Normalización de bases de datos. </h2>
+                <h3>Subtemas</h3>
+                <ul>
+                    <li> 4.1 Conceptos básicos </li>
+                    <li> 4.2 Primera forma normal. </li>
+                    <li> 4.3 Dependencias funcionales y transitivas. </li>
+                    <li> 4.4 Segunda forma normal. </li>
+                    <li> 4.5 Tercera forma normal. </li>
+                    <li> 4.6 Forma normal Boyce-Codd. </li>
+                    <li> 4.7 Otras formas normales. </li>
+                </ul>
+                <h3>Competencia Específica</h3>
+                <ul>
+                    <li>Aplica el proceso de normalización al diseño de los esquemas de bases de datos para detectar
+                        anomalías y garantizar la integridad de la información.</li>
+                </ul>
+                <h3>Competencias genéricas</h3>
+                <ul>
+                    <li>Capacidad de abstracción, análisis y síntesis </li>
+                    <li>Capacidad de aplicar los conocimientos en la práctica </li>
+                    <li>Capacidad para identificar, plantear y resolver problemas </li>
+                    <li> Capacidad de trabajo en equipo
+                    </li>
+                </ul>
+                <h3>Actividades de aprendizaje</h3>
+                <ul>
+                    <li>Identificar mediante una investigación, el concepto de normalización, las reglas aplicables en
+                        cada una de las formas normales y las anomalías que resuelve cada una de ellas y elaborar un
+                        mapa conceptual. </li>
+                    <li>Aplicar el proceso de normalización de base de datos a los esquemas generados en las situaciones
+                        del contexto analizadas en el tema anterior. </li>
+                    <li> Aplicar el proceso de normalización al esquema de base de datos del problema planteado
+                        anteriormente y elaborar un documento donde se muestre paso a paso la transición del diseño al
+                        aplicar cada forma normal, describiendo las anomalías encontradas. Presentarlo y discutirlo en
+                        el grupo. </li>
+                </ul>
+                <h3>Material</h3>
+                <ul>
+                    <li></li>
+                </ul>
+            </div>
+            <div>
+                <h2>Tema 5: Álgebra relacional.</h2>
+                <h3>Subtemas</h3>
+                <ul>
+                    <li> 5.1 Operaciones fundamentales del álgebra relacional </li>
+                    <li> 5.2 Álgebra relacional extendida.</li>
+                </ul>
+                <h3>Competencia Específica</h3>
+                <ul>
+                    <li>Aplica operadores de álgebra relacional básica y extendida para acceder a la información de base
+                        de datos.</li>
+                </ul>
+                <h3>Competencias genéricas</h3>
+                <ul>
+                    <li>Capacidad de abstracción análisis y síntesis. </li>
+                    <li>Capacidad de aplicar los conocimientos en la práctica. </li>
+                    <li>Capacidad para identificar, plantear y resolver problemas </li>
+                    <li> Capacidad de trabajo en equipo </li>
+                </ul>
+                <h3>Actividades de aprendizaje</h3>
+                <ul>
+                    <li>Investigar el concepto de álgebra relacional, operadores unarios (selección y proyección),
+                        operadores binarios (producto cartesiano, join o reunión, unión, intersección, diferencia,
+                        división) y operadores del álgebra relacional extendida. Elaborar un mapa conceptual. </li>
+                    <li>Seleccionar ejemplos donde se apliquen los operadores del álgebra relacional básica y extendida,
+                        analizarlos en grupos de trabajo y exponerlo haciendo uso de las herramientas computacionales
+                        disponibles. </li>
+                    <li>Resolver ejercicios de aplicación del álgebra relacional básica y extendida de acuerdo a los
+                        requerimientos solicitados sobre la información de los esquemas de base de datos creados en
+                        temas anteriores, según lo requiera el caso y elaborar documentación de resultados. </li>
+                </ul>
+                <h3>Material</h3>
+                <ul>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="p-5 mb-4 bg-light rounded-3">
+                <!--tema6-->
+                <h2>Tema 6: Introducción al lenguaje SQL.</h2>
+                <h3>Subtemas</h3>
+                <ul>
+                    <li> 6.1 Características </li>
+                    <li>6.2 Lenguaje de Definición de Datos (LDD) </li>
+                    <li> 6.3 Lenguaje de Manipulación de Datos (LMD) </li>
+                </ul>
+                <h3>Competencia Específica</h3>
+                <ul>
+                    <li> Aplica los comandos básicos del lenguaje SQL para la definición y manipulación de bases de
+                        datos.</li>
+                </ul>
+                <h3>Competencias genéricas</h3>
+                <ul>
+                    <li>Capacidad de abstracción análisis y síntesis. </li>
+                    <li>Capacidad de aplicar los conocimientos en la práctica. </li>
+                    <li>Capacidad para identificar, plantear y resolver problemas </li>
+                    <li>Capacidad de trabajo en equipo </li>
+                </ul>
+                <h3>Actividades de aprendizaje</h3>
+                <ul>
+                    <li>Investigar las características, la clasificación y sintaxis básica de sentencias del lenguaje
+                        SQL. Elaborar una tabla que incluya la clasificación, el nombre de la sentencia, su descripción
+                        y sintaxis. </li>
+                    <li>Resolver ejercicios de aplicación de comandos básicos del LDD ( create database, create table,
+                        alter table, drop table,entre otros) y del LMD (insert, update, delete y select) de acuerdo a
+                        los requerimientos solicitados sobre la información de los esquemas de base de datos creados en
+                        temas anteriores, según lo requiera el caso y elaborar documentación de resultados.</li>
+                </ul>
+                <h3>Material</h3>
+                <ul>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
