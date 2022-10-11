@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 300 300">
+  <defs>
+    <!-- The text path: see links above regarding coordinate system -->
+    <path id="curve" d="M 50 130 C 60 20, 190 20, 200 130" />
+  </defs>
+
+  <text fill="#D54E02" font-size="16.5" font-family="Helvetica Neue" font-weight="300">
+    <!-- This is the magic -->
+    <textPath startOffset="0" xlink:href="#curve">Instituto Tecnológico Superior de Martínez de la Torre</textPath>
+  </text>
+</svg>
