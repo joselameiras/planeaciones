@@ -1,11 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 300 300">
   <defs>
     <!-- The text path: see links above regarding coordinate system -->
-    <path id="curve" d="M 50 130 C 60 20, 190 20, 200 130" />
+    <path  id="curva" d="M 15 150 C 10 20  190 20 185 150 M 185 150 z" />
+   <path  id="curva2" d="M 0 150 C 10 290  190 290 200 150 M 200 150 z" />
   </defs>
 
-  <text fill="#D54E02" font-size="16.5" font-family="Helvetica Neue" font-weight="300">
+  <text fill="#000000" font-size="22" font-family="Helvetica Neue" font-weight="500">
     <!-- This is the magic -->
-    <textPath startOffset="0" xlink:href="#curve">Instituto Tecnológico Superior de Martínez de la Torre</textPath>
+    <textPath startOffset="12" xlink:href="#curva">INSTITUTO TECNOLÓGICO</textPath>
+ </text>
+   <text fill="#000000" font-size="23.5" font-family="Helvetica Neue" font-weight="300">
+    <!-- This is the magic -->
+   <textPath startOffset="0" xlink:href="#curva2">Superior de Martínez de la Torre</textPath>
   </text>
+  <g transform="translate(100,150)" stroke="#000" stroke-width="2">
+    <path d="M0 0 45 0A60 60 0 0 1 44 0Z" fill="#F00"/>
+  </g>
+  <g transform="translate(100,150)" stroke="#000" stroke-width="2">
+    <path d="M0 0 45 0A60 60 0 0 1 -45 -0Z" fill="#00F"/>
+  </g>
 </svg>

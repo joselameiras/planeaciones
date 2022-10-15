@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dot {
+            position: absolute;
+            height: 25px;
+            width: 25px;
+            background-color: rgb(25, 225, 48);
+            border-radius: 50%;
+            display: inline-block;
+            text-align: center;
+            display: table-cell;
+            vertical-align: middle;
+            position: absolute;
+            top: 20px;
+            right: 50%;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="lienzoarbol">
+    </div>
+</body>
+<script>
+    var nodo = null;
+    function dibujanodo(valornodo, posx, posy) {
+
+        var newDiv = document.createElement("div");
+        newDiv.style.position = "absolute";
+        newDiv.style.backgroundColor = "red";
+        newDiv.style.border = "2px blue dotted";
+        newDiv.style.borderRadius = "50%";
+        newDiv.style.width = "25px";
+        newDiv.style.top = posx + "px";
+        newDiv.style.left = posy + "px";
+
+        var newContent = document.createTextNode(valornodo);
+        newDiv.appendChild(newContent); //añade texto al div creado.
+
+        // añade el elemento creado y su contenido al DOM
+        var currentDiv = document.getElementById("lienzoarbol");
+        document.body.insertBefore(newDiv, currentDiv);
+    }
+    function agreganodo(valornodo, posx, posy) {
+
+
+        dibujanodo(valornodo, posx, posy);
+
+    }
+    agreganodo(58, 20, 110);
+    agreganodo(28, 50, 80);
+    agreganodo(30, 80, 110);
+    agreganodo(13, 80, 50);
+    agreganodo(70, 50, 140);
+    agreganodo(90, 80, 170);
+    agreganodo(29, 110, 80);
+
+
+
+
+</script>
+
+</html>
