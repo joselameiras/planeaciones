@@ -53,216 +53,85 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.js" type="text/javascript"></script>
   <script>
 
-    largotexto = 170;
+    largotexto = 50;
     $(document).ready(function () {
-      $(".card-text").each(function (index, value) {
-        if (datos[index][2].length >= largotexto) {
-          //falta especificar longitud de corte cuando no emcuentra espacio despues de la longitud 
-          this.innerHTML = datos[index][2].substr(0, datos[index][2].indexOf(" ", largotexto));
+      e = 0;
+      for (e = 0; datos.length - 1; e++) {
+        var divdescripcion = document.createElement("div");
+        var divimagen = document.createElement("div");
+        var divcontenedor = document.createElement("div");
+        divcontenedor.className = "card-body";
+        var descripcion = document.createElement("p");
+        descripcion.className = "card-title";
+        var liga = document.createElement("a");
+        liga.href = datos[e][3];
+        liga.className = "btn btn-primary";
+        var textoliga = document.createTextNode("Planeación");
+        liga.appendChild(textoliga);
+        var titulo = document.createElement("h5");
+
+        var textotitulo = document.createTextNode(datos[e][1]);
+        titulo.appendChild(textotitulo);
+        titulo.className = "card-title";
+
+        var imagen = document.createElement("img");
+
+        if (datos[e][2].length >= largotexto) {
+          var text = document.createTextNode(datos[e][2].substr(0, datos[e][2].indexOf(" ", largotexto)));
         }
         else {
-          this.innerHTML = datos[index][2];
+          var text = document.createTextNode(datos[e][2]);
         }
-      });
+
+
+        imagen.src = 'img/' + datos[e][0];
+        descripcion.appendChild(text);
+        divdescripcion.appendChild(titulo);
+        divdescripcion.appendChild(descripcion);
+        divdescripcion.appendChild(liga);
+
+        divimagen.appendChild(imagen);
+        divimagen.className = "card-img";
+        divcontenedor.appendChild(divimagen);
+        divcontenedor.appendChild(divdescripcion);
+        divcontenedor.className = "card mb-4 rounded-3 shadow-sm";
+        document.getElementById("ciclo").appendChild(divcontenedor)
+      }
     });
+   /* <div class="col" id="ejemplo">
+                            <div class="card mb-4 rounded-3 shadow-sm">
+                              <div class="card-img">
+                                <img src="img/diagrama-venn-concepto-1.png" class="card-img-top" alt="...">
+                              </div>
+                              <div class="card-body">
+                                <h5 class="card-title">Matemáticas Discretas</h5>
+                                <p class="card-text"></p>
+                                <a href="matematicasDiscretas.html" class="btn btn-primary">Planeación</a>
+                              </div>
+                            </div>
+                          </div>
+                      */
+    /*largotexto = 170;
+      $(document).ready(function () {
+        $(".card-text").each(function (index, value) {
+          if (datos[index][2].length >= largotexto) {
+            //falta especificar longitud de corte cuando no emcuentra espacio despues de la longitud 
+            this.innerHTML = datos[index][2].substr(0, datos[index][2].indexOf(" ", largotexto));
+          }
+          else {
+            this.innerHTML = datos[index][2];
+          }
+        });
+      });*/
   </script>
 </head>
 
 <body>
   <div class="container">
 
-
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
-      <div class="col">
-        <div class="card mb-4 rounded-3 shadow-sm">
-          <div class="card-img">
-            <img src="img/diagrama-venn-concepto-1.png" class="card-img-top" alt="...">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Matemáticas Discretas</h5>
-            <p class="card-text"></p>
-            <a href="matematicasDiscretas.html" class="btn btn-primary">Planeación</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card mb-4 rounded-3 shadow-sm">
-          <div class="card-img">
-            <img src="img/tumblr_inline_nu4jttVwsN1tc2xa0_500.png" class="card-img-top" alt="...">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Mercadotecnia electrónica</h5>
-            <p class="card-text"></p>
-            <a href="mercadotecniaelectronica.html" class="btn btn-primary">Planeación</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card mb-4 rounded-3 shadow-sm">
-          <div class="card-img">
-            <img src="img/fundprog.jpg" class="card-img-top" alt="...">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Fundamentos de Programación</h5>
-            <p class="card-text"></p>
-            <a href="fundamentosProgramacion.html" class="btn btn-primary">Planeación</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="card mb-4 rounded-3 shadow-sm">
-          <div class="card-img">
-            <img src="img/graficacion.png" class="card-img-top" alt="...">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Graficación</h5>
-            <p class="card-text"></p>
-            <a href="graficacion.html" class="btn btn-primary">Planeación</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="card mb-4 rounded-3 shadow-sm">
-          <div class="card-img">
-            <img src="img/bigdata-exploration.png" class="card-img-top" alt="...">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Estructura de Datos</h5>
-            <p class="card-text"></p>
-            <a href="estructuradeDatos.html" class="btn btn-primary">Planeación</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="card mb-4 rounded-3 shadow-sm">
-          <div class="card-img">
-            <img src="img/AdmBD.jpeg" class="card-img-top" alt="...">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title"></p>
-            <a href="AdminBaseDatos.html" class="btn btn-primary">Planeación</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="card mb-4 rounded-3 shadow-sm">
-          <div class="card-img">
-            <img src="img/fundBD.jpeg" class="card-img-top" alt="...">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Fundamentos de Base de Datos</h5>
-            <p class="card-text"></p>
-            <a href="fundamentosBasesDatos.html" class="btn btn-primary">Planeación</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="card mb-4 rounded-3 shadow-sm">
-          <div class="card-img">
-            <img src="img/programacionOO.jpeg" class="card-img-top" alt="...">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Programación orientada objetos</h5>
-            <p class="card-text">
-            </p>
-            <a href="ProgramacionOO.html" class="btn btn-primary">Planeación</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="card mb-4 rounded-3 shadow-sm">
-          <div class="card-img">
-            <img src="img/simulacion.jpeg" class="card-img-top" alt="...">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Simulación</h5>
-            <p class="card-text"></p>
-            <a href="simulacion.html" class="btn btn-primary">Planeación</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="card mb-4 rounded-3 shadow-sm">
-          <div class="card-img"><img src="img/Progweb.jpeg" class="card-img-top" alt="..."></div>
-
-          <div class="card-body">
-            <h5 class="card-title"></p>
-            <a href="progweb.html" class="btn btn-primary">Planeación</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="card mb-4 rounded-3 shadow-sm">
-          <div class="card-img">
-            <img src="img/programacion.jpeg" class="card-img-top" alt="...">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Programación</h5>
-            <p class="card-text"></p>
-            <a href="programacion.html" class="btn btn-primary">Planeación</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="card mb-4 rounded-3 shadow-sm">
-          <div class="card-img">
-            <img src="img/Ingsoft.jpeg" class="card-img-top" alt="...">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Ingeniería de Software</h5>
-            <p class="card-text"></p>
-            <a href="ingSoftware.html" class="btn btn-primary">Planeación</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="card mb-4 rounded-3 shadow-sm">
-          <div class="card-img">
-            <img src="img/gestion.png" class="card-img-top" alt="...">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Gestión de Proyectos de Software</h5>
-            <p class="card-text">Aplica metodologías e instrumentos, para garantizar la gestión adecuada de un proyecto
-              de software.
-            </p>
-            <a href="gestionProyectosSoftware.html" class="btn btn-primary">Planeación</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card mb-4 rounded-3 shadow-sm">
-          <div class="card-img">
-            <img src="img/programacioncompetitiva.jpg" class="card-img-top" alt="...">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Programación Competitiva</h5>
-            <p class="card-text">El taller de programación competitiva es un espacio para acercar a jóvenes de
-              bachillerato a contenidos y plataformas
-              relacionadas con el mundo de la programación y el uso del razonamiento lógico matemático en la solución de
-              problemas
-            </p>
-            <a href="programacioncompetitiva.html" class="btn btn-primary">Planeación</a>
-          </div>
-        </div>
-      </div>
-
-
-
-
+    <div id="ciclo" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
     </div>
-
-
-
+  </div>
   </div>
 </body>
 
