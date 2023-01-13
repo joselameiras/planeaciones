@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Fundamentos de Base de Datos</title>
+</head>
+
+<body>
+    <div class="container">
+        <div name="Datos Generales">
+            <h1>Datos generales de la asignatura</h1>
+            <p> <b>Nombre de la asignatura: </b> fundamentos de bases de datos con Oracle<br>
+            </p>
+
+            <h1>Presentación</h1>
+            <h2>Visión general</h2>
+            <p>
+                Este curso ofrece a los alumnos una introducción a los conceptos básicos de las bases de datos
+                relacionales. El curso
+                enseña a los
+                alumnos terminología de las bases de datos relacionales, así como conceptos del modelado de datos, la
+                creación de
+                diagramas de
+                relación de entidad (ERD) y la asignación de ERD. Oracle SQL Developer Data Modeler se utiliza para
+                crear ERD y el
+                lenguaje de
+                consulta estructurado (SQL) se utiliza para interactuar con una base de datos relacional y manipular
+                datos de la base de
+                datos.
+                Oracle Application Express se utiliza para proporcionar actividades prácticas y participativas. Al
+                aprovechar las
+                técnicas de aprendizaje
+                basadas en el proyecto, los alumnos crearán y trabajarán con proyectos que les retan a diseñar,
+                implantar y demostrar
+                una solución
+                de base de datos para una empresa u organización.
+
+            </p>
+
+
+
+            <h1>Competencias previas</h1>
+
+            <p>
+                Necesarios: Conocimientos generales del objetivo de una base de datos <br>
+                Recomendados: Experiencia previa con una aplicación de base de datos
+
+            </p>
+
+
+        </div>
+
+
+        <div name="Temas">
+            <h1>Temas</h1>
+            <div>
+                <h2>Sección 1: Introducción</h2>
+                <h3>Subtemas</h3>
+                <ul>
+                    <li>1-1 Introducción al curso
+                        <ul>
+                            <li>o Identificar los objetivos del curso y su finalidad
+                                o </li>
+                            <li>Describir la estrategia de aprendizaje del curso
+                            </li>
+                            <li>o Comprender el entorno del curso</li>
+                        </ul>
+                    </li>
+                    <li>1-2 Introducción a las bases de datos
+                        <ul>
+                            <li>Diferenciar entre datos e información</li>
+                            <li>Definir una base de datos</li>
+                            <li>Describir los elementos de un sistema de gestión de base de datos (DBMS)</li>
+                            <li>Identificar las transformaciones en la computación</li>
+                            <li>Identificar ejemplos de negocio y de sectores donde se utilizan las aplicaciones de base
+                                de datos
+                            </li>
+                        </ul>
+                    </li>
+                    <li>1-3 Tipos de modelos de bases de datos
+                        <ul>
+                            <li>Describir el proceso de desarrollo de bases de datos</li>
+                            <li>Explicar los tipos comunes de modelos de bases de datos:
+                                <ul>
+                                    <li>Modelo de archivo plano</li>
+                                    <li>Modelo jerárquico</li>
+                                    <li>Modelo de red</li>
+                                    <li>Modelo orientado al objeto</li>
+                                    <li>Modelo relacional</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>1-4 Requisitos de negocio
+
+                        <ul>
+                            <li>Explicar la necesidad de una solución de base de datos</li>
+                            <li>Describir la importancia de las reglas de negocio</li>
+                            <li>Identificar las directrices y ejemplos de escritura de reglas de negocio</li>
+                            <li>Explicar la importancia de comunicar claramente y captar de forma precisa los requisitos
+                                de información</li>
+                        </ul>
+                    </li>
+                    <li>1.5 Clasificación de Bases de Datos </li>
+                    <li>1.6 Arquitectura de base de datos </li>
+                    <li> 1.7 Arquitectura del SGBD</li>
+
+
+                </ul>
+
+            </div>
+            <div>
+                <h2>Sección 2: Bases de datos y modelado de datos</h2>
+                <h3>Subtemas</h3>
+                <ul>
+                    <li>2-1 Bases de datos relacionales
+                        <ul>
+                            <li>Describir las funciones de una tabla única</li>
+                            <li>Describir las funciones y reglas de una base de datos relacional</li>
+                            <li>Describir las ventajas e inconvenientes de los tipos de bases de datos</li>
+                            <li>Definir tablas relacionales y términos clave</li>
+                        </ul>
+                    </li>
+                    <li>2-2 Modelos de datos conceptuales y físicos
+                        <ul>
+                            <li>Describir un modelo de datos conceptual</li>
+                            <li>Describir un modelo de datos lógico</li>
+                            <li>Describir un modelo de datos físico</li>
+                            <li>Analizar las similitudes y diferencias entre los modelos de datos conceptuales y físicos
+                            </li>
+                        </ul>
+                    </li>
+                    <li>2-3 Entidades y atributos
+                        <ul>
+                            <li>Identificar entidades</li>
+                            <li>Identificar atributos</li>
+                            <li>Identificar atributos obligatorios, opcionales, volátiles y no volátiles</li>
+                            <li>Describir las notaciones Barker, Bachman y de ingeniería de la información</li>
+                        </ul>
+                    </li>
+                    <li>2-4 Identificadores únicos
+                        <ul>
+                            <li>Identificar los identificadores únicos (UID)</li>
+                            <li>Identificar los identificadores únicos artificiales</li>
+                            <li>Identificar los identificadores únicos compuestos</li>
+                            <li>Identificar los identificadores únicos candidatos y secundarios</li>
+                            <li>Definir llaves primarias</li>
+                        </ul>
+                    </li>
+                    <li>2-5 Relaciones
+                        <ul>
+                            <li>Definir y reconocer ejemplos de relaciones y las correspondientes claves foráneas</li>
+                            <li>Identificar las opciones de las relaciones</li>
+                            <li>Identificar la cardinalidad de las relaciones</li>
+                            <li>Tipos de relaciones</li>
+                            <li>Matriz de relaciones</li>
+                        </ul>
+                    </li>
+                    <li>2-6 Modelado de relación de entidades (ERD)
+                        <ul>
+                            <li>Describir el modelado de datos</li>
+                            <li>Explicar el término "sin implantación" cuando está relacionado con los modelos de datos
+                                y la implantación del
+                                diseño de base de datos</li>
+                            <li>Enumerar los cuatro objetivos del modelado de relación de entidad</li>
+                            <li>Identificar un diagrama de relación de entidad (ERD)</li>
+                            <li>Asignación de relaciones con ERDish</li>
+                            <li>Crear componentes de ERD que representan entidades y atributos según las convenciones
+                                para la creación
+                                de diagramas</li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+            <div>
+                <h2>Sección 3: Acotación del modelo de datos</h2>
+                <h3>Subtemas</h3>
+                <ul>
+                    <li>3-1 Más sobre las relaciones
+                        <ul>
+                            <li>Resolver relaciones M:M</li>
+                            <li>Identificar relaciones de bloqueo</li>
+                            <li>Identificar e ilustrar relaciones intrasferibles</li>
+                            <li>Identificar y representar las entidades supertipo y subtipo</li>
+                            <li>Identificar relaciones jerárquicas, recursivas y de arco</li>
+                        </ul>
+                    </li>
+                    <li>3-2 Seguimiento de los cambios de datos
+                        <ul>
+                            <li>Realizar un seguimiento de los datos que cambian a lo largo del tiempo</li>
+                        </ul>
+                    </li>
+                    <li>3-3 Reglas de negocio y normalización
+                        <ul>
+                            <li>Explicar la normalización</li>
+                            <li>Describir los formatos normales</li>
+                            <li>Utilizar la normalización para validar los datos</li>
+                            <li>Describir reglas de negocio</li>
+                        </ul>
+                    </li>
+                    <li>3-4 Asignación y terminología del modelado de datos
+                        <ul>
+                            <li>Aplicar la asignación de terminología entre los modelos lógicos y físicos</li>
+                            <li>Comprender y aplicar las reglas de nomenclatura de Oracle para tablas y columnas
+                                utilizadas en los modelos físicos</li>
+                            <li>Aplicar las reglas de asignación de relaciones para transformar las relaciones
+                                correctamente</li>
+                        </ul>
+                    </li>
+
+                </ul>
+
+
+            </div>
+            <div>
+                <h2>Sección 4: Oracle SQL Developer Data Modeler </h2>
+                <h3>Subtemas</h3>
+                <ul>
+                    <li>4-1 Oracle SQL Developer Data Modeler
+                        <ul>
+                            <li>Utilizar Oracle SQL Developer Data Modeler para crear:
+                                <ul>
+                                    <li>Entidades, atributos y UID con la opcionalidad y la cardinalidad correctas</li>
+                                    <li>Entidades supertipo y subtipo</li>
+                                    <li>Relaciones de arco, jerárquicas, de bloqueo y recursivas</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>4-2 Conversión de un modelo lógico en un modelo relacional
+                        <ul>
+                            <li>Describir cómo convertir un modelo lógico en un modelo relacional en Oracle SQL
+                                Developer Data Modeler</li>
+                            <li>Enumerar los pasos para convertir un modelo lógico en un modelo relacional</li>
+                            <li>Enumerar los pasos para convertir un modelo relacional en un modelo lógico en Oracle SQL
+                                Developer
+                                Data Modeler</li>
+                        </ul>
+                    </li>
+
+
+                </ul>
+
+            </div>
+            <div>
+                <h2>Sección 5: Asignación al modelo físico</h2>
+                <h3>Subtemas</h3>
+                <ul>
+                    <li>5-1 Asignación de entidades y atributos
+                        <ul>
+                            <li>Explicar las convenciones de nomenclatura utilizadas en una base de datos relacional.
+                            </li>
+                            <li>Utilizar Oracle SQL Developer Data Modeler para crear un glosario y aplicar los
+                                estándares de nomenclatura para
+                                <ul>
+                                    <li>Asignar entidades a nombres de tabla</li>
+                                    <li>Asignar atributos a nombres de columna</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>5-2 Asignación de llaves primarias y ajenas
+                        <ul>
+                            <li>Decidir reglas de nomenclatura para:
+                                <ul>
+                                    <li>Nombres de restricción de llave primaria</li>
+                                    <li>Nombres de restricción de clave foránea</li>
+                                    <li>Nombres de columna de clave foránea</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+
+
+            </div>
+            <div>
+                <h2>Sección 6: Introducción a SQL</h2>
+                <h3>Subtemas</h3>
+                <ul>
+                    <li>6-1 Introducción a Oracle Application Express
+                        <ul>
+                            <li>Distinguir entre software de aplicación y software del sistema y dar un ejemplo de cada
+                                uno</li>
+                            <li>Conectarse al entorno de práctica de Oracle Application Express</li>
+                            <li>Ejecutar una consulta simple para recuperar información de la base de datos</li>
+                            <li>Aplicar las reglas de SQL para mostrar todas las columnas y un subjuego de columnas
+                                especificadas por criterios</li>
+                        </ul>
+                    </li>
+                    <li>6-2 Lenguaje de consulta estructurado (SQL)
+                        <ul>
+                            <li>Describir cómo se organizan los datos en una base de datos relacional</li>
+                            <li>Explicar las distintas terminologías de bases de datos relacionales</li>
+                            <li>Definir el lenguaje de consulta estructurado y sus funciones</li>
+                            <li>Describir cómo se produce el procesamiento SQL</li>
+                            <li>Identificar las herramientas que se utilizan para acceder a la base de datos relacional
+                            </li>
+                        </ul>
+
+                    </li>
+                    <li>6-3 Lenguaje de definición de datos (DDL)
+                        <ul>
+                            <li>Identificar los pasos necesarios para crear tablas de base de datos</li>
+                            <li>Describir la finalidad del lenguaje de definición de datos (DDL)</li>
+                            <li>Mostrar las operaciones DDL necesarias para crear y mantener las tablas de una base de
+                                datos</li>
+                        </ul>
+
+                    </li>
+                    <li> 6-4 Lenguaje de manipulación de datos (DML)
+                        <ul>
+                            <li>Describir la finalidad del lenguaje de manipulación de datos (DML)</li>
+                            <li>Explicar las operaciones DML que son necesarias para gestionar los datos de tabla de una
+                                base
+                                de datos:
+                                <ul>
+                                    <li>Insertar</li>
+                                    <li>Actualizar</li>
+                                    <li>Suprimir</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </li>
+                    <li>6-5 Lenguaje de control de transacciones (TCL)
+                        <ul>
+                            <li>Describir la finalidad del lenguaje de control de transacciones (TCL)</li>
+                            <li>Explicar las operaciones TCL que son necesarias para gestionar una transacción:
+                                <ul>
+                                    <li>COMMIT</li>
+                                    <li>SAVEPOINT</li>
+                                    <li>ROLLBACK</li>
+                                </ul>
+                            </li>
+                            <li>Describir la necesidad de consistencia de lectura</li>
+                        </ul>
+
+                    </li>
+                    <li>6-6 Recuperación de datos mediante SELECT
+                        <ul>
+                            <li>Enumerar las capacidades de las sentencias SQL SELECT</li>
+                            <li>Escribir y ejecutar una sentencia SELECT que:
+                                <ul>
+                                    <li>Devuelva todas las filas y columnas de una tabla</li>
+                                    <li>Devuelva columnas específicas de una tabla</li>
+                                    <li>Utilice alias de columna para mostrar cabeceras de columna descriptivas</li>
+                                    <li>Utilice operadores aritméticos y de concatenación</li>
+                                    <li>Utilice cadenas de caracteres literales</li>
+                                    <li>Elimine filas duplicadas</li>
+                                </ul>
+                            </li>
+                            <li>Describa la estructura de una tabla</li>
+                        </ul>
+
+                    </li>
+                    <li>6-7 Restricción de datos mediante WHERE
+                        <ul>
+                            <li> o Limitar filas con:
+                                <ul>
+                                    <li>Cláusula WHERE</li>
+                                    <li>Operadores de comparación que utilizan las condiciones =, <=,>=, <>,>,<, !=,^=,
+                                                    BETWEEN, IN, LIKE y NULL</li>
+                                    <li>Condiciones lógicas que utilizan los operadores
+                                        AND, OR y NOT </li>
+                                </ul>
+                            </li>
+                            <li>
+                                Describir las reglas de prioridad de los operadores en una expresión</li>
+                        </ul>
+                    </li>
+                    <li>6-8 Ordenamiento de datos mediante ORDER BY
+                        <ul>
+                            <li>Usar la cláusula ORDER BY para ordenar los resultados de las consultas SQL</li>
+                            <li>Identificar la ubicación correcta de la cláusula ORDER BY dentro de una sentencia SELECT
+                            </li>
+                            <li>Utilizar ROWNUM para análisis de N principales</li>
+                            <li>Utilizar variables de sustitución en la cláusula WHERE</li>
+                        </ul>
+
+                    </li>
+                    <li>6-9 Unión de Tablas mediante JOIN
+                        <ul>
+                            <li>Escribir sentencias SELECT para acceder a datos de más
+                                de una tabla mediante uniones igualitarias y no igualitarias</li>
+                            <li>Utilizar una autounión para unir una tabla a sí misma </li>
+                            <li>Utilizar datos de vista de uniones OUTER que normalmente no cumplen una condición de
+                                unión</li>
+                            <li>Generar un producto cartesiano (unión cruzada) de todas las filas de dos o más tablas
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
