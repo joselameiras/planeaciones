@@ -1,8 +1,9 @@
 datos = [
-    ['x.jpeg', 'Tópicos Avanzados de Programación', 'tttt', 'taprog.html'],
+    ['cgi.png', 'Tópicos Avanzados de Programación', 'tttt', 'topicosavanzadosprogramacion.html'],
     ['FundBD.jpeg', 'Fundamentos de Base de Datos', 'Analiza requerimientos y diseña bases de datos para generar soluciones al tratamiento de información basándose en modelos y estándares.', 'fundamentosBasesDatos.html'],
     ['progweb.jpeg', 'Programación Web', 'Desarrolla aplicaciones web dinámicas del lado cliente y del servidor, considerando la conectividad a orígenes de datos, la interconectividad entre aplicaciones y cómputo en la nube.', 'progweb.html'],
     ['x.jpeg', 'Tópicos avanzados de Tecnologias Web', 'tttt', 'taprogweb.html'],
+    ['java_oracle.png', 'Fundamentos de bases de datos con Oracle', 'tttt', 'oracleBD.html'],
     ['programacioncompetitiva.jpg', 'Programación Competitiva', 'El taller de programación competitiva es un espacio para acercar a jóvenes de bachillerato a contenidos y plataformas relacionadas con el mundo de la programación y el uso del razonamiento lógico matemático en la solución de problemas ', 'programacioncompetitiva.html'],
     ['diagrama-venn-concepto-1.png', 'Matemáticas Discretas', 'Comprende y aplica los conceptos básicos de lógica matemática, relaciones, grafos y árboles para aplicarlos a modelos que resuelvan problemas computacionales.', 'matematicasDiscretas.html'],
     ['tumblr_inline_nu4jttVwsN1tc2xa0_500.png', 'Mercadotecnia electrónica', 'Conoce y desarrolla habilidades en el uso de tecnologías de negocios digitales que apoyen las decisiones mercadológicas para colocar productos o servicios en los mercados electrónicos con el fin de posicionar una marca.', 'mercadotecniaelectronica.html'],
