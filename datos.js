@@ -1,7 +1,7 @@
 datos = [
     ['cgi.png', 'Tópicos Avanzados de Programación', 'tttt', 'topicosavanzadosprogramacion.html'],
-    ['FundBD.jpeg', 'Fundamentos de Base de Datos', 'Analiza requerimientos y diseña bases de datos para generar soluciones al tratamiento de información basándose en modelos y estándares.', 'fundamentosBasesDatos.html'],
-    ['progweb.jpeg', 'Programación Web', 'Desarrolla aplicaciones web dinámicas del lado cliente y del servidor, considerando la conectividad a orígenes de datos, la interconectividad entre aplicaciones y cómputo en la nube.', 'progweb.html'],
+    ['fundBD.jpeg', 'Fundamentos de Base de Datos', 'Analiza requerimientos y diseña bases de datos para generar soluciones al tratamiento de información basándose en modelos y estándares.', 'fundamentosBasesDatos.html'],
+    ['Progweb.jpeg', 'Programación Web', 'Desarrolla aplicaciones web dinámicas del lado cliente y del servidor, considerando la conectividad a orígenes de datos, la interconectividad entre aplicaciones y cómputo en la nube.', 'progweb.html'],
     ['x.jpeg', 'Tópicos avanzados de Tecnologias Web', 'tttt', 'taprogweb.html'],
     ['java_oracle.png', 'Fundamentos de bases de datos con Oracle', 'tttt', 'oracleBD.html'],
     ['programacioncompetitiva.jpg', 'Programación Competitiva', 'El taller de programación competitiva es un espacio para acercar a jóvenes de bachillerato a contenidos y plataformas relacionadas con el mundo de la programación y el uso del razonamiento lógico matemático en la solución de problemas ', 'programacioncompetitiva.html'],
@@ -14,6 +14,6 @@ datos = [
     ['programacionOO.jpeg', 'Programación orientada objetos', 'Aplica la programación orientada a objetos para resolver problemas reales y de ingeniería. ', 'ProgramacionOO.html'],
     ['simulacion.jpeg', 'Simulación', 'Analiza, modela, desarrolla y experimenta sistemas productivos y de servicios, reales o hipotéticos, a través de la simulación de eventos discretos, para dar servicio al usuario que necesite tomar decisiones, con el fin de describir con claridad su funcionamiento, aplicando herramientas matemáticas.', 'simulacion.html'],
     ['programacion.jpeg', 'Programación', 'Traduce métodos de solución de problemas matemáticos en algoritmos computacionales para facilitar y resolver numéricamente sistemas de ecuaciones lineales y diferenciales aplicados a problemas de ingeniería.', 'programacion.html'],
-    ['ingsoft.jpeg', 'Ingeniería de Software', 'Desarrolla soluciones de software, considerando la metodología y herramientas para la elaboración de un proyecto aplicativo en diferentes escenarios.', 'ingSoftware.html'],
+    ['Ingsoft.jpeg', 'Ingeniería de Software', 'Desarrolla soluciones de software, considerando la metodología y herramientas para la elaboración de un proyecto aplicativo en diferentes escenarios.', 'ingSoftware.html'],
     ['gestion.png', 'Gestión de Proyectos de Software', 'Aplica metodologías e instrumentos, para garantizar la gestión adecuada de un proyecto de software.', 'gestionProyectosSoftware.html'],
     ,]
