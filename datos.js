@@ -16,4 +16,5 @@ datos = [
     ['programacion.jpeg', 'Programación', 'Traduce métodos de solución de problemas matemáticos en algoritmos computacionales para facilitar y resolver numéricamente sistemas de ecuaciones lineales y diferenciales aplicados a problemas de ingeniería.', 'programacion.html'],
     ['Ingsoft.jpeg', 'Ingeniería de Software', 'Desarrolla soluciones de software, considerando la metodología y herramientas para la elaboración de un proyecto aplicativo en diferentes escenarios.', 'ingSoftware.html'],
     ['gestion.png', 'Gestión de Proyectos de Software', 'Aplica metodologías e instrumentos, para garantizar la gestión adecuada de un proyecto de software.', 'gestionProyectosSoftware.html'],
-    ,]
+    ['tallerbd.jpg', 'Taller de base de datos', 'Implementa bases de datos para apoyar la toma de decisiones considerando las reglas de negocio.', 'tallerdebasededatos.html'],
+]

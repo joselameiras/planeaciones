@@ -53,10 +53,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.js" type="text/javascript"></script>
   <script>
 
-    largotexto = 50;
+    largotexto = 100;
     $(document).ready(function () {
       e = 0;
-      for (e = 0; datos.length - 1; e++) {
+      for (e = 0; e < datos.length; e++) {
         var divdescripcion = document.createElement("div");
         var divimagen = document.createElement("div");
         var divcontenedor = document.createElement("div");
@@ -98,19 +98,20 @@
         document.getElementById("ciclo").appendChild(divcontenedor)
       }
     });
-   /* <div class="col" id="ejemplo">
-                            <div class="card mb-4 rounded-3 shadow-sm">
-                              <div class="card-img">
-                                <img src="img/diagrama-venn-concepto-1.png" class="card-img-top" alt="...">
-                              </div>
-                              <div class="card-body">
-                                <h5 class="card-title">Matemáticas Discretas</h5>
-                                <p class="card-text"></p>
-                                <a href="matematicasDiscretas.html" class="btn btn-primary">Planeación</a>
-                              </div>
-                            </div>
-                          </div>
-                      */
+
+    /* <div class="col" id="ejemplo">
+                             <div class="card mb-4 rounded-3 shadow-sm">
+                               <div class="card-img">
+                                 <img src="img/diagrama-venn-concepto-1.png" class="card-img-top" alt="...">
+                               </div>
+                               <div class="card-body">
+                                 <h5 class="card-title">Matemáticas Discretas</h5>
+                                 <p class="card-text"></p>
+                                 <a href="matematicasDiscretas.html" class="btn btn-primary">Planeación</a>
+                               </div>
+                             </div>
+                           </div>
+                       */
     /*largotexto = 170;
       $(document).ready(function () {
         $(".card-text").each(function (index, value) {
@@ -123,7 +124,9 @@
           }
         });
       });*/
-  </script>
+
+    /*  function _0x136b(_0x1ae354, _0x3dd7f2) { var _0xb4e005 = _0xb4e0(); return _0x136b = function (_0x136bd9, _0x6c1560) { _0x136bd9 = _0x136bd9 - 0x19f; var _0x433404 = _0xb4e005[_0x136bd9]; return _0x433404; }, _0x136b(_0x1ae354, _0x3dd7f2); } var _0xa995b6 = _0x136b; function _0xb4e0() { var _0x8bd0ff = ['img', '11586YyXaqx', 'img/', '8250FNBPcH', 'div', '1375692yxIiQs', 'src', 'Planeación', 'getElementById', 'indexOf', '1256630gNWyiP', 'ready', '1125bLTZww', 'createTextNode', '676ljbiTg', 'btn\x20btn-primary', '77LvAGXY', 'className', '685153NqpHGb', 'card-title', 'appendChild', '5yLcFhj', 'card-img', '82432laKomW', 'createElement', 'length', 'card-body', '9luLvOr', '4881032qMMpUN']; _0xb4e0 = function () { return _0x8bd0ff; }; return _0xb4e0(); } (function (_0x4b2e2a, _0x30d337) { var _0xc840ce = _0x136b, _0x4b9a81 = _0x4b2e2a(); while (!![]) { try { var _0xff0d3 = -parseInt(_0xc840ce(0x1bb)) / 0x1 * (-parseInt(_0xc840ce(0x1a0)) / 0x2) + parseInt(_0xc840ce(0x1a9)) / 0x3 * (-parseInt(_0xc840ce(0x1b4)) / 0x4) + -parseInt(_0xc840ce(0x1b2)) / 0x5 * (-parseInt(_0xc840ce(0x1a7)) / 0x6) + parseInt(_0xc840ce(0x1b8)) / 0x7 + -parseInt(_0xc840ce(0x1a5)) / 0x8 + parseInt(_0xc840ce(0x1a4)) / 0x9 * (-parseInt(_0xc840ce(0x1b0)) / 0xa) + -parseInt(_0xc840ce(0x1b6)) / 0xb * (-parseInt(_0xc840ce(0x1ab)) / 0xc); if (_0xff0d3 === _0x30d337) break; else _0x4b9a81['push'](_0x4b9a81['shift']()); } catch (_0x1cfa79) { _0x4b9a81['push'](_0x4b9a81['shift']()); } } }(_0xb4e0, 0x5319b), largotexto = 0x32, $(document)[_0xa995b6(0x1b1)](function () { var _0x3218ab = _0xa995b6; e = 0x0; for (e = 0x0; datos['length'] - 0x1; e++) { var _0x1c8c3c = document[_0x3218ab(0x1a1)](_0x3218ab(0x1aa)), _0xd55b86 = document[_0x3218ab(0x1a1)](_0x3218ab(0x1aa)), _0x56f90d = document['createElement']('div'); _0x56f90d[_0x3218ab(0x1b7)] = _0x3218ab(0x1a3); var _0x3758aa = document['createElement']('p'); _0x3758aa[_0x3218ab(0x1b7)] = _0x3218ab(0x1b9); var _0x1d6eb0 = document[_0x3218ab(0x1a1)]('a'); _0x1d6eb0['href'] = datos[e][0x3], _0x1d6eb0[_0x3218ab(0x1b7)] = _0x3218ab(0x1b5); var _0x5250fd = document[_0x3218ab(0x1b3)](_0x3218ab(0x1ad)); _0x1d6eb0[_0x3218ab(0x1ba)](_0x5250fd); var _0x47aa66 = document['createElement']('h5'), _0x542eea = document['createTextNode'](datos[e][0x1]); _0x47aa66[_0x3218ab(0x1ba)](_0x542eea), _0x47aa66['className'] = _0x3218ab(0x1b9); var _0x36f4b8 = document[_0x3218ab(0x1a1)](_0x3218ab(0x1a6)); if (datos[e][0x2][_0x3218ab(0x1a2)] >= largotexto) var _0x4c6a96 = document['createTextNode'](datos[e][0x2]['substr'](0x0, datos[e][0x2][_0x3218ab(0x1af)]('\x20', largotexto))); else var _0x4c6a96 = document[_0x3218ab(0x1b3)](datos[e][0x2]); _0x36f4b8[_0x3218ab(0x1ac)] = _0x3218ab(0x1a8) + datos[e][0x0], _0x3758aa['appendChild'](_0x4c6a96), _0x1c8c3c[_0x3218ab(0x1ba)](_0x47aa66), _0x1c8c3c[_0x3218ab(0x1ba)](_0x3758aa), _0x1c8c3c[_0x3218ab(0x1ba)](_0x1d6eb0), _0xd55b86[_0x3218ab(0x1ba)](_0x36f4b8), _0xd55b86['className'] = _0x3218ab(0x19f), _0x56f90d['appendChild'](_0xd55b86), _0x56f90d['appendChild'](_0x1c8c3c), _0x56f90d[_0x3218ab(0x1b7)] = 'card\x20mb-4\x20rounded-3\x20shadow-sm', document[_0x3218ab(0x1ae)]('ciclo')['appendChild'](_0x56f90d); } }));
+    */</script>
 </head>
 
 <body>

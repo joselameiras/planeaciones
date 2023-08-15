@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Taller de base de datos</title>
+</head>
+
+<body>
+    <div class="container">
+        <div name="Datos Generales">
+            <h1>1.- Datos generales de la asignatura</h1>
+            <p> <b>Nombre de la asignatura: </b> Taller de base de datos <br> <b>Clave de la asignatura: </b> SCA – 1025
+                <br> <b title="Sistema de Asignación y Transferencia de Créditos Académicos">SATCA*: </b> 0-4-4
+            </p>
+
+            <h1>2.- Presentación</h1>
+            <h2>Caracterización de la asignatura</h2>
+            <p> Esta asignatura aporta al perfil del Ingeniero en Sistemas Computacionales las competencias
+                para implementar bases de datos y apoyar la toma de decisiones, conforme a las normas
+                vigentes de manejo y seguridad de la información, utilizando tecnologías emergentes con el fin
+                de integrar soluciones computacionales con diferentes plataformas y/o dispositivos
+                considerando los aspectos legales, éticos, sociales y de desarrollo sustentable.
+                <br>Consiste en el uso de lenguaje de definición de datos, lenguaje de manipulación de datos,
+                control de acceso, transacciones, SQL procedural, conectividad de base de datos
+                <br>También proporciona las bases para otras asignaturas directamente vinculadas con el desarrollo
+                de software y uso de bases de datos. De manera particular, los temas cubiertos en esta
+                asignatura se aplican en la definición de esquemas de bases de datos relacionales y la
+                manipulación de la información considerando ambientes transaccionales multiusuario.
+                <br>Para el buen desarrollo de esta asignatura es necesario contar con las competencias
+                desarrolladas en las materias previas de: fundamentos de bases de datos y tópicos avanzados
+                de programación en temas como diseño y modelado, manejo de SQL y aspectos de
+                conectividad entre bases de datos y lenguajes huésped.
+                <br>Se aportan competencias a las asignaturas de Administración de Bases de Datos, Ingeniería de
+                Software, Gestión de Proyectos de Software y Programación Web, que se cursarán
+                posteriormente.
+
+            </p>
+
+            <h2>Intención didactica</h2>
+            <p> En el <b>Tema 1</b> se instala el motor de un SGBD y una herramienta de administración para poder
+                aplicar
+                el contenido temático del curso, posteriormente se conduce al alumno en la creación y modificación
+                de esquemas de bases de datos mediante el uso del lenguaje de definición de datos y elementos de
+                integridad.<br>
+                En el <b>Tema 2</b> , se desarrollan prácticas que incluyen el uso de instrucciones para manipulación de
+                registros, recuperación de datos y manejo de vistas.
+                <br>En el <b>Tema 3</b> , el alumno aprende a asignar roles, cuentas de usuarios y privilegios sobre un
+                SGBD.
+                <br>En el <b>Tema 4</b> , se lleva al alumno a la operación multiusuario de la base de datos, el acceso
+                concurrente
+                y el control de transacciones, se puede hacer énfasis en las anomalías derivadas de la concurrencia y
+                los mecanismos para tratarlas.
+                <br>
+                En el <b>Tema 5</b> , se estudia la creación y llamada de Stored Procedures, Functions y Triggers, con
+                lo cual
+                se muestra al estudiante como los distintos SGBD pueden implementar codificaciones para
+                automatizar procesos que garanticen consistencia e integridad de datos independiente a los lenguajes
+                de programación.<br>
+                En el <b>Tema 6</b> , se muestra la conectividad de la base de datos con distintas tecnologías de
+                conexión y su
+                integración con diversos lenguajes de programación.<br>
+                Se realizará un proyecto integrador que involucre de manera práctica los conocimientos de todos los
+                temas del curso, mismo que incorpora competencias específicas que posteriormente serán parte de
+                proyectos relacionados con otras asignaturas y que requieran la implementación profesional de bases
+                de datos.<br>
+                El enfoque indica que los temas se desarrollen en su totalidad con prácticas diseñadas para la
+                aplicación
+                y desarrollo de las técnicas consideradas para cada tema, con lo que se introduce al estudiante en la
+                manipulación directa de los esquemas e instancias de bases de datos con la utilización de niveles de
+                seguridad en su acceso, mediante consolas y/o herramientas comerciales vigentes. Asimismo, propicia
+                la implementación de casos de estudio reales que ofrezcan múltiples escenarios, cabe observar que el
+                diseño de estas prácticas debe promover que el aprendizaje sea más significativo para el desarrollo de
+                las competencias.<br>
+                En la parte de instalación se abordará únicamente como requisito para la realización de las prácticas y
+                se sugiere que se incluya un SGBD adicional. En el manejo del lenguaje de definición de datos, se
+                deben estudiar los comandos de creación y modificación de esquemas y aplicar los conceptos de
+                integridad y restricciones.<br>
+                En relación al tema de Algebra Relacional de la asignatura Fundamentos de BD, se diseñan actividades
+                para traducirlo a consultas en SQL, que abarcan desde la estructura más sencilla de SELECT hasta las
+                expresiones más complejas que incluyen subconsultas, joins (reuniones) y funciones de agrupación
+                con su cálculo de predicado correspondiente.<br>
+                En el tema de control de acceso se establece la creación de roles y usuarios así como la gestión de
+                privilegios de acceso a objetos como bases de datos, tablas y/o columnas.<br>
+                El tema IV que se refiere a concurrencia considera el estudio y aplicación práctica de los conceptos y
+                propiedades ACID de las transacciones, así como el grado de consistencia; en particular se estudian
+                los niveles de aislamiento con que los diferentes gestores disminuyen las anomalías provocadas por la
+                concurrencia, se considera fuertemente el diseño de las planificaciones y la serialización para concluir
+                con deshacer o confirmar las operaciones.<br>
+                La intención del tema V, es aplicar y comprender la utilidad de manejar SQL procedural, con la
+                integración de reglas de negocio que definan el comportamiento de la base de datos desde el mismo
+                gestor sin implicar el uso de una aplicación.<br>
+                En el tema de conectividad de bases de datos con lenguajes de programación o plataformas, se pretende
+                que el estudiante conozca la conformación de cadenas de conexión y observe su funcionamiento, bien
+                sea desde algún lenguaje huésped o anfitrión en plataformas convencionales o móviles.<br>
+
+                En el transcurso de las actividades programadas es muy importante que el estudiante aprenda a valorar
+                las actividades que lleva a cabo y entienda que está construyendo su actividad profesional futura y en
+                consecuencia actúe de una manera profesional; de igual manera, aprecie la importancia del
+                conocimiento y los hábitos de trabajo; desarrolle la precisión y la curiosidad, la puntualidad, el
+                entusiasmo y el interés, la tenacidad, la flexibilidad y la autonomía.<br>
+                El estudiante debe efectuar la realización de prácticas encaminadas a la implementación de los temas
+                de estudio, para lograr la competencia principal basada en la creación de soluciones a problemas que
+                requieren la implementación de reglas de negocios en bases de datos.<br>
+                Las competencias genéricas que esta asignatura pretende fomentar son:
+            <ul>
+                <li>Capacidad de abstracción, análisis</li>
+                <li>Capacidad de aplicar los conocimientos en la práctica</li>
+                <li>Capacidad de comunicación escrita</li>
+                <li>Habilidades para buscar, procesar y analizar información procedente de fuentes diversas
+                </li>
+                <li>Capacidad para actuar en nuevas situaciones
+                </li>
+                <li>Capacidad para identificar, plantear y resolver problemas
+                </li>
+                <li>Capacidad para tomar decisiones
+                </li>
+            </ul>
+
+
+            El docente en general debe desempeñar su labor desde una visión conductual para fomentar la
+            inducción, el autoaprendizaje y la verificación de resultados
+
+            </p>
+
+
+
+
+            <h1>4.- Competencia a desarrollar</h1>
+
+            <p>
+            <ul>
+                <li>Implementa bases de datos para apoyar la toma de decisiones considerando las reglas de negocio
+                </li>
+            </ul>
+            </p>
+            <h1>5.- Competencias previas</h1>
+
+            <p>
+            <ul>
+                <li>Analiza requerimientos definidos por el cliente por la organización y diseña bases de datos para
+                    generar soluciones al tratamiento de información de acuerdo a sus reglas de negocio </li>
+
+            </ul>
+
+            </p>
+        </div>
+
+
+        <div name="Temas">
+            <h1>6.- Temario y Actividades de Aprendizaje de los temas(7)</h1>
+            <div>
+                <h2>Tema 1: Lenguaje de definición de datos</h2>
+                <h3>Subtemas</h3>
+                <ul>
+                    <li>
+                        1.1 Instalación de un SGBD
+                    </li>
+                    <li>1.2 Creación del esquema de la base de datos
+                        <ul>
+                            <li>a. Modificación del esquema de la base de
+                                datos.</li>
+                            <li>b. Aplicación de constraints</li>
+                        </ul>
+                    </li>
+                </ul>
+                <h3>Competencia Específica</h3>
+                <ul>
+                    <li> Utiliza procedimientos de instalación de SGBD
+                        para diversas plataformas.
+                    </li>
+                    <li>Construye esquemas de base de datos para
+                        proyectar las necesidades de un cliente en base a
+                        las reglas sintácticas del lenguaje de definición
+                        de datos.</li>
+                </ul>
+                <h3>Actividades de aprendizaje</h3>
+                <ul>
+                    <li>Realizar la búsqueda, descarga e
+                        instalación de un SGBD.
+                    </li>
+                    <li>Elaborar el reporte de instalación.
+                    </li>
+                    <li> Interpretar modelos de bases de datos.
+                    </li>
+                    <li>Crear esquemas de base de datos a partir
+                        de especificaciones definidas.
+                    </li>
+                    <li>Modificar el esquema de base de datos
+                        para aplicar las restricciones o reflejar
+                        cambios de diseño.
+                    </li>
+                    <li>Elaborar reporte de prácticas.</li>
+
+                </ul>
+                <h3>Material</h3>
+                <ul>
+                    <li></li>
+                </ul>
+            </div>
+            <div>
+                <h2>Tema 2: Lenguaje de manipulación de datos</h2>
+                <h3>Subtemas</h3>
+                <ul>
+                    <li>
+
+                        2.1 Inserción, eliminación y modificación de
+                        registros
+                    </li>
+                    <li>2.2 Consultas
+                    </li>
+                    <li>2.3 Funciones, conversión, agrupamiento,
+                        ordenamiento
+                    </li>
+                    <li>2.4 Joins
+                    </li>
+                    <li>2.5 Subconsultas
+                    </li>
+                    <li>2.6 Operadores set
+                    </li>
+                    <li>2.7 Vistas
+                    </li>
+
+                </ul>
+                <h3>Competencia Específica</h3>
+                <ul>
+                    <li>Construye expresiones en SQL para resolver
+                        necesidades de recuperación de información con
+                        las reglas sintácticas del lenguaje de manipulación
+                        de datos.</li>
+                </ul>
+                <h3>Actividades de aprendizaje</h3>
+                <ul>
+                    <li>Realizar operaciones de inserción,
+                        actualización y eliminación de registros
+                        en la base de datos,
+                    </li>
+                    <li>Ejercitar la creación de consultas mediante
+                        un problemario.
+                    </li>
+                    <li>Analizar los requerimientos de
+                        información, determinar las soluciones
+                        para construir la consulta en SQL que
+                        resuelve el problema.
+                    </li>
+                    <li>Elaborar reportes de las prácticas.</li>
+
+                </ul>
+                <h3>Material</h3>
+                <ul>
+                    <li></li>
+                </ul>
+            </div>
+
+            <div>
+                <h2>Tema 3: Control de acceso</h2>
+                <h3>Subtemas</h3>
+                <ul>
+                    <li>
+
+                        3.1 Tipos de usuario
+                    </li>
+                    <li>3.2 Creación de usuarios
+                    </li>
+                    <li>3.3 Privilegios a usuarios
+                    </li>
+                    <li>3.4 Roles
+                    </li>
+
+                </ul>
+                <h3>Competencia Específica</h3>
+                <ul>
+                    <li> Implementar mecanismos de seguridad básicos
+                        para el acceso a datos mediante el otorgamiento o
+                        denegación de privilegios.</li>
+                </ul>
+                <h3>Actividades de aprendizaje</h3>
+                <ul>
+                    <li>Análisis de políticas de seguridad
+                    </li>
+                    <li>Creación de mecanismos de seguridad
+                        mediante creación usuarios y roles.
+                    </li>
+                    <li>Aplicar el concepto de autorizaciones a
+                        objetos de la base de datos.
+                    </li>
+                    <li>Elaborar ejercicios con la incorporación
+                        de las actividades previas de este tema.</li>
+
+                </ul>
+                <h3>Material</h3>
+                <ul>
+                    <li></li>
+                </ul>
+            </div>
+
+            <div>
+                <h2>Tema 4: Concurrencia</h2>
+                <h3>Subtemas</h3>
+                <ul>
+                    <li>
+
+                        4.1 Conceptos
+                    </li>
+                    <li>4.2 Propiedades de las transacciones
+                    </li>
+                    <li> 4.3 Grados de consistencia
+                    </li>
+                    <li> 4.4 Niveles de aislamiento
+                    </li>
+                    <li> 4.5 Commit y rollback
+                    </li>
+
+                </ul>
+                <h3>Competencia Específica</h3>
+                <ul>
+                    <li> Controla la concurrencia de la base de datos, para
+                        disminuir los problemas de desempeño y/o
+                        consistencia</li>
+                </ul>
+                <h3>Actividades de aprendizaje</h3>
+                <ul>
+                    <li>Crear escenarios para generar y analizar
+                        los problemas de la concurrencia.
+                    </li>
+                    <li>Configurar el SGBD en modo
+                        transaccional.
+                    </li>
+                    <li>Realizar ejercicios donde utilice los
+                        conceptos de granuralidad, grados de
+                        consistencia, niveles de aislamiento.
+                    </li>
+                    <li>Realice una evaluación de ¿cómo afecta al
+                        desempeño y consistencia, el nivel de
+                        aislamiento de la transacción?
+                        Elaborar reportes de resultados.</li>
+
+                </ul>
+                <h3>Material</h3>
+                <ul>
+                    <li></li>
+                </ul>
+            </div>
+
+            <div>
+                <h2>Tema 5: SQL Procedural</h2>
+                <h3>Subtemas</h3>
+                <ul>
+                    <li>
+
+                        5.1 Stored Procedures
+                    </li>
+                    <li>5.2 Functions
+                    </li>
+                    <li>5.3 Triggers
+                    </li>
+
+                </ul>
+                <h3>Competencia Específica</h3>
+                <ul>
+                    <li>Aplicar SQL procedural para automatizar reglas
+                        de negocio y garantizar la integridad,
+                        consistencia y seguridad de los datos; mediante
+                        el uso de procedimientos almacenados, funciones
+                        y disparadores</li>
+                </ul>
+                <h3>Actividades de aprendizaje</h3>
+                <ul>
+                    <li>Realizar ejercicios que refuerzen la
+                        sintaxis y estructura de los Stored
+                        procedures, functions y triggers.
+                    </li>
+                    <li>Resolver problemas que requieran el uso
+                        de Stored procedures, functions y/o
+                        triggers.
+                    </li>
+                    <li>Implementar reglas de negocio y/o
+                        auditoría utilizando disparadores.
+                    </li>
+                    <li>Elaborar reportes.</li>
+
+                </ul>
+                <h3>Material</h3>
+                <ul>
+                    <li></li>
+                </ul>
+            </div>
+
+            <div>
+                <h2>Tema 6: Conectividad de Bases
+                    de Datos</h2>
+                <h3>Subtemas</h3>
+                <ul>
+                    <li>
+
+                        6.1 ODBC, ADO.NET, JDBC
+                    </li>
+                    <li>6.2 Conectividad desde un lenguaje huésped o en
+                        dispositivos móviles
+                    </li>
+
+                </ul>
+                <h3>Competencia Específica</h3>
+                <ul>
+                    <li>Establecer conexiones entre el SGBD y algún
+                        lenguaje de programación, mediante cadenas de
+                        conexión y/o protocolos de comunicación</li>
+                </ul>
+                <h3>Actividades de aprendizaje</h3>
+                <ul>
+                    <li>Buscar, seleccionar, descargar e instalar
+                        las diferentes librerías de conectividad
+                        para distintos SGBD.
+                    </li>
+                    <li>Realizar ejercicios de conectividad desde
+                        lenguajes huésped o anfitriones.
+                    </li>
+                    <li>Realizar ejercicios que utilicen
+                        infraestructura de red para establecer
+                        conexiones entre un SGBD y protocolos
+                        de comunicación.
+                    </li>
+                    <li>Elaborar reportes de prácticas.</li>
+
+                </ul>
+                <h3>Material</h3>
+                <ul>
+                    <li></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
