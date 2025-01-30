@@ -1,0 +1,29 @@
+<html>
+<script>
+    function mueve(obj, dir) {
+        if (dir == "izq") {
+            obj.style.left = (obj.offsetLeft - 20) + 'px';
+        }
+        else {
+            obj.style.left = (obj.offsetLeft + 20) + 'px';
+        }
+
+    }
+</script>
+<style>
+    div {
+        position: relative;
+    }
+</style>
+
+<body>
+    <div onclick="mueve(this,'izq');" oncontextmenu="return false"
+        style="background-color: aqua;width: 40px; height: 40px;" id="primerobjeto">
+        x
+    </div>
+    <div style="width: 40px; height: 40px;background-color: blue;" id="segundoobjeto">
+        y
+    </div>
+</body>
+
+</html>

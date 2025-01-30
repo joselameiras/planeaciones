@@ -3,48 +3,34 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <script>
+        function alerta(obj) {
+            saludo = "Hola " + obj.value;
+            alert(saludo);
+        }
+    </script>
 </head>
 
 <body>
-    <table>
-        <tr>
-            <td colspan="4"><input type="number" name="" id="txtresultado"></td>
-        </tr>
-        <tr>
-            <td><input onclick="escribenumero(this)" type="button" value="1"></td>
-            <td><input onclick="escribenumero(this)" type="button" value="2"></td>
-            <td> <input onclick="escribenumero(this)" type="button" value="3"></td>
-            <td><input onclick="escribenumero(this)" type="button" value="+"></td>-
-        </tr>
-        <tr>
-            <td><input type="button" value="4"></td>
-            <td><input type="button" value="5"></td>
-            <td> <input type="button" value="6"></td>
-            <td><input type="button" value="-"></td>
-        </tr>
-        <tr>
-            <td><input type="button" value="7"></td>
-            <td><input type="button" value="8"></td>
-            <td> <input type="button" value="9"></td>
-            <td><input type="button" value="*"></td>
-        </tr>
-        <tr>
-            <td><input type="button" value="."></td>
-            <td><input type="button" value="0"></td>
-            <td> <input type="button" value="/"></td>
-            <td><input type="button" onclick="escribenumero(this)" value="="></td>
-        </tr>
-    </table>
+    nombre:<input type="text" onblur="alerta(this)" name="" id=""><br>
+    correo:<input type="email" name="" id=""><br>
+    <input type="file" name="" id="">
+    <input type="number" name="" id="">
+    <input type="button" value="">
+    <input type="date" name="" id=""><br>
+    <input type="color" name="" id="">
+    <input type="checkbox" name="color" id="">
+    <input type="checkbox" name="color" id="">
+    <input type="radio" name="favorito" id="">
+    <input type="radio" name="favorito" id=""><br>
+    <select name="" id="">
+        <option value="1">Opcion 1</option>
+        <option value="2">Opcion 2</option>
+        <option value="3">Opcion 3</option>
+    </select>
 </body>
-<script>
-    function escribenumero(numero) {
-        varnumero = numero.value;
-        document.getElementById("txtresultado").value = varnumero;
-        //alert(numero.value);
-    }
-</script>
 
 </html>
