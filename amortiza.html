@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,25 +27,25 @@ td {
     <div class="container mt-5">
         <form id="amortizationForm" class="mb-4">
             <div class="form-group">
-                <label for="months">Edad:</label>
+                <label for="edad">Edad:</label>
                 <input type="number" id="edad" class="form-control" placeholder="Ingrese su edad" value="18" required>
             </div>  
              <div class="form-group ui-widget">
-                <label for="months">País de nacimiento:</label>
+                <label for="nacionalidad">País de nacimiento:</label>
                 <input type="text" id="nacionalidad" class="form-control" placeholder="Nacionalidad" value="México" required>
                
             </div>
             <div class="form-group ui-widget">
-                <label for="months">Ingresos mensuales:</label>
-                <input type="number" id="ingresosmensuales" class="form-control" placeholder="Ingreso mensual neto" value="México" required>
+                <label for="ingresosmensuales">Ingresos mensuales:</label>
+                <input type="number" id="ingresosmensuales" class="form-control" placeholder="Ingreso mensual neto" value="10000" required>
                
             </div> 
             <div class="form-group">
-                <label for="months">Buro de credito (bueno, regular,malo):</label>
+                <label for="buro">Buro de credito (bueno, regular,malo):</label>
                 <input type="text" id="buro" value="bueno" class="form-control" placeholder="bueno, regular,malo" required>
             </div>
             <div class="form-group">
-                <label for="months">Score:</label>
+                <label for="scorecrediticio">Score:</label>
                 <input type="range" name="score" id="scorecrediticio"  min="400" max="850" value="625" class="form-range" id="customRange1">
                 <p id="scorecrediticio2">Score: 625</p>
                 <script>
@@ -63,7 +63,7 @@ td {
             </div>
            
             <div class="form-group">
-                <label for="months">Número de Meses:</label>
+                <label for="mesescredito">Número de Meses:</label>
                 <input type="range" name="score" id="mesescredito" step="12"  min="12" max="60" value="12" class="form-range" id="customRange1">
                 <p id="mesescredito2">Meses: 12</p>
                 <script>
@@ -79,7 +79,7 @@ td {
 
           
         <div class="form-group">
-            <label for="annualInterestRate" id="lbltasareferencia">Tasa de Interés Referencia:</label>
+            <label for="tasareferencia" id="lbltasareferencia">Tasa de Interés Referencia:</label>
             <input type="number" value="10"  id="tasareferencia" class="form-control" placeholder="Ingrese la tasa de interés anual" step="0.0001" required>
         </div>
              <div class="form-group">
@@ -187,10 +187,10 @@ td {
                     });
                 }
 $("#montotabla").text(principal.toFixed(2));
-$("#tasatabla").text(annualInterestRate.toFixed(2)*100);
+$("#tasatabla").text(annualInterestRate.toFixed(3)*100);
 $("#mesestabla").text(months);
 $("#montotabla2").text("=moneda("+principal.toFixed(2)+")");
-$("#tasatabla2").text(annualInterestRate.toFixed(2)*100 );
+$("#tasatabla2").text(annualInterestRate.toFixed(3)*100 );
 $("#mesestabla2").text(months);   
                 $("#amortizationTable").empty();
                 $("#amortizationOculta").empty();
@@ -338,9 +338,10 @@ $.ajax({
 			  var reg=""+serie.titulo+" "+serie.datos[0].fecha+":    "+serie.datos[0].dato+""
 			 
               $("#tasareferencia").val(parseFloat(serie.datos[0].dato).toFixed(2));
+              $("#lbltasareferencia").text(reg);
               $("#annualInterestRate").val(parseFloat(serie.datos[0].dato).toFixed(2)); 
+              actualizatasa()
               
-              $("#lbltasareferencia").text(serie.titulo+" "+serie.datos[0].fecha);
 		}
 	}
 });
@@ -357,7 +358,7 @@ $.ajax({
         var score = $("#scorecrediticio").val();
 
 
-        var tasareferencia = (parseFloat(tasareferencia) - (parseFloat(score) - 850) * 0.01).toFixed(2);
+        var tasareferencia = (parseFloat(tasareferencia) - (parseFloat(score) - 850) * 0.01).toFixed(1);
         if (tasareferencia < 0) {
             tasareferencia = 0;
         }
