@@ -126,7 +126,7 @@ $("#montotabla").text(principal.toFixed(2));
 $("#tasatabla").text(annualInterestRate.toFixed(2));
 $("#mesestabla").text(months);
 $("#montotabla2").text("=moneda("+principal.toFixed(2)+")");
-$("#tasatabla2").text(annualInterestRate.toFixed(2) );
+$("#tasatabla2").text(annualInterestRate.toFixed(2)*100 );
 $("#mesestabla2").text(months);   
                 $("#amortizationTable").empty();
                 $("#amortizationOculta").empty();
@@ -166,8 +166,8 @@ $("#mesestabla2").text(months);
                     $("#amortizationOculta").append(`
                         <tr>
                             <td>=a${i+6}+1</td>
-                            <td>=moneda((E$3*(E$4*100/12))/(1-POTENCIA(1+(E$4*100/12),-E$5)))</td>
-                            <td>=moneda(E${i+6}*(E$4*100/12))</td>
+                            <td>=moneda((E$3*(E$4*.01/12))/(1-POTENCIA(1+(E$4*.01/12),-E$5)))</td>
+                            <td>=moneda(E${i+6}*(E$4*.01/12))</td>
                             <td>=moneda(B${i+7}-C${i+7})</td>
                             <td>=moneda(e${i+6}-b${i+7}+c${i+7})</td>
                         </tr>
