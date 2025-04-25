@@ -123,10 +123,10 @@
                 const monthlyPayment = (principal * monthlyInterestRate) / (1 - Math.pow(1 + monthlyInterestRate, -months));
                 let balance = principal;
 $("#montotabla").text(principal.toFixed(2));
-$("#tasatabla").text(annualInterestRate.toFixed(2) + "%");
+$("#tasatabla").text(annualInterestRate.toFixed(2));
 $("#mesestabla").text(months);
 $("#montotabla2").text("=moneda("+principal.toFixed(2)+")");
-$("#tasatabla2").text(annualInterestRate.toFixed(2) + "%");
+$("#tasatabla2").text(annualInterestRate.toFixed(2) );
 $("#mesestabla2").text(months);   
                 $("#amortizationTable").empty();
                 $("#amortizationOculta").empty();
