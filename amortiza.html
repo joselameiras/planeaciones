@@ -46,7 +46,7 @@
         </form>
 
     
-         <table  class="table table-bordered table-striped mt-4">
+         <table id="tablahtml"  class="table table-bordered table-striped mt-4">
             <thead class="thead-dark">
                 <tr>
                     <tr>
@@ -237,6 +237,19 @@ $("#mesestabla2").text(months);
      var ctx = { worksheet: name || 'Worksheet', table: table.innerHTML }
      window.location.href = uri + base64(format(template, ctx))
 }
+        $('#tablahtml').each(function () {
+    var item = $(this).text();
+    var num = Number(item).toLocaleString('en');    
+
+    if (Number(item) < 0) {
+        num = num.replace('-','');
+        $(this).addClass('negMoney');
+    }else{
+        $(this).addClass('enMoney');
+    }
+    
+    $(this).text(num);
+});
    </script>
  
 </body> 
