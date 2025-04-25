@@ -87,7 +87,7 @@
                     </tr>
                     <tr>
                         <th colspan="4" style="text-align: right;">Monto: </th>
-                        <th  id="montotabla2">100000  </th>
+                        <th  id="montotabla2">=moneda(100000 ) </th>
                     </tr>
                     <tr>
                         <th colspan="4" style="text-align: right;">Tasa: </th>
@@ -125,7 +125,7 @@
 $("#montotabla").text(principal.toFixed(2));
 $("#tasatabla").text(annualInterestRate.toFixed(2) + "%");
 $("#mesestabla").text(months);
-$("#montotabla2").text(principal.toFixed(2));
+$("#montotabla2").text("=moneda("+principal.toFixed(2)+")");
 $("#tasatabla2").text(annualInterestRate.toFixed(2) + "%");
 $("#mesestabla2").text(months);   
                 $("#amortizationTable").empty();
@@ -146,7 +146,7 @@ $("#mesestabla2").text(months);
                             <td>-</td>
                             <td>-</td>
                             <td>-</td>
-                            <td>${balance.toFixed(2)}</td>
+                            <td>=moneda(${balance.toFixed(2)})</td>
                         </tr>
                     `);
                 for (let i = 1; i <= months; i++) {
