@@ -1,71 +1,216 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .dot {
-            position: absolute;
-            height: 25px;
-            width: 25px;
-            background-color: rgb(25, 225, 48);
-            border-radius: 50%;
-            display: inline-block;
-            text-align: center;
-            display: table-cell;
-            vertical-align: middle;
-            position: absolute;
-            top: 20px;
-            right: 50%;
-
-        }
-    </style>
-</head>
-
-<body>
-    <div id="lienzoarbol">
-    </div>
-</body>
 <script>
-    var nodo = null;
-    function dibujanodo(valornodo, posx, posy) {
 
-        var newDiv = document.createElement("div");
-        newDiv.style.position = "absolute";
-        newDiv.style.backgroundColor = "red";
-        newDiv.style.border = "2px blue dotted";
-        newDiv.style.borderRadius = "50%";
-        newDiv.style.width = "25px";
-        newDiv.style.top = posx + "px";
-        newDiv.style.left = posy + "px";
+    cadena1 = [
+        "Aldobeli Francisco León", "ALEJANDRO ALEJO RUIZ", "Amairani Barranco Alejo", "Amir Alfredo Rolón May",
+        "Ana Lilia Tirado Chamu", "Ana Paulina Castro Martinez",
+        "Analine Rincón Benavidez", "Arianna Isabel Suárez Rodríguez", "Armando Rodriguez Hernandez",
+        "Brenda Itzel Ventura Acosta", "Brianda Citlalit Rivera Rivas", "Carmen Contreras Lauranchet",
+        "Fidel Galván Zavaleta", "Guadalupe Hernández Romero", "Héctor Tinoco Castillo", "JAIRO RAFAEL CRUZ AGUIRRE",
+        "Jose Antonio García Macegoza", "José Bernardo López Benítez", "Juan Manuel Ventura Rodríguez", "Karina Vazquez Herrera",
+        "Luis Rodríguez y Portilla", "María Elena Nava Ríos", "María Guadalupe González Nava", "María Isabel Sánchez Wall", "Miroslava Martínez Juárez", "Monserrat Sampayo Garcia", "Omar Mendez Martinez",
+        "Oscar Didier Rolón May", "Ramón Campos Reyes", "Raúl Dorantes Ruíz", "ROBERTO ARGENIS GONZALEZ ORTIZ",
+        "Silvia Meredith Pimentel Loya", "Susana Jiménez Cortés", "Ulises Alarcón Parra", "Valentín Cabrera Ruiz",
+        "Verónica Olarte Oliva", "Abraham Rodríguez Chacón", "Adriana López y Perdomo", "Angelina Mireya Landa Diaz",
+        "Antonio Espinoza Herrera", "Antonio Telesforo Alonso", "Bernabe morales hernandez", "Cointo García Guevara",
+        "Emmanuel Osain Jiménez Pliego", "Enrique Badillo Platas", "Ernesto Rafael Zarate Arbona",
+        "Gaelia Eurydice Díaz Pascual", "Isabel Martínez Acosta", "Isidro Miranda García", "Jorge Arturo Hernández Andrade",
+        "Josè Antonio Montes Jimènez", "José David Mendoza Gómez", "Jose Miguel Muñoz Martinez", "José Renán Cantellano Castillo", "JOSEFINA ALAVEZ CELIS", "Juan Carlos Ortigoza Eugenio", "Karla Nayeli Alemán Ceseña", "Luis Ignacio Segura Limas", "Luz Angelica Gómez Landa", "Mairely Pazos Varela", "María del Rosario Rodriguez Loyo", "Martha Patricia Ramiro Cruz", "Mayra Anameli Bello Sancristóbal", "Mayra Lisset Rosas Díaz", "Mirna Gabriela Cervantes Cortes", "Oscar Barragán Sánchez", "Rafael Pérez Cortés", "Sandra Ivonne Azuara Méndez", "Silvia Yarely Benavides Diaz", "Uriel Guzmán Huerta", "Yamillet Hapsune Lozano Hernandez", "Zinnia Angélica Espino Morales", "Alcira Guerrero Mendez", "Alejandro Pérez Díaz", "Azucena Badillo Merino", "Beatriz López Concha", "Brenda Suemy Trujillo García", "César Augusto Plácido Islas", "Gisela Mendoza Herrera", "Guadalupe Salazar Serrano", "Ilse Guadalupe Austria Herrera", "Ixmalci Jaimes Hernández",
+        "Jaime Palacios Perez", "JAQUELINE IRENE GONZÁLEZ RECIO", "Jesus Luis Sánchez Cervantes", "jorge luis fernandez govea", "José Antonio Briones Córdova", "José Jairo Escamilla Chávez", "José Roberto Leal Peralta", "Juana Maria Aguilar Benavides", "LUIS DEL ANGEL SANCHEZ TORRES", "MARCIAL RUANO LOPEZ", "Margarita Murrieta Landa", "Maria Andrea Aguilar López", "María Angélica Del pino Alarcón", "Mariel Dorantes Martinez", "Mario Olarte Cervantes", "Neftali de la Rosa Contreras", "Olegaria del Carmen Couturier Diaz", "Osmara Zuleima García Hernandez", "Oziel rosas sobrevilla", "René Ortiz Montalvo", "Rocío Vergara Nájera", "Rosa Yuvina Pérez Vicedas", "RUBEN DARIO MAGAÑA MARTINEZ", "Rubí Escamilla Chávez", "Soemi cruz avila", "Xochitl Mireya Olazo Lagunes", "Zuria Contreras Morales", "Adriana Margarita Chávez Avila", "Alberto Candanedo Fuentes", "Angelica Barraza Aguirre", "Aurora Guerrero Hilario", "Bernavé Ortuño Lemus", "Carlos Francisco Gómez Espinoza", "Christian Ederic Mota Pérez", "Cynthia Yussete Hernández Bringas", "Edilberto Salgado Domínguez", "Elia Acevedo Zavaleta", "Erika Guadalupe Juarez Andrade", "Erika Villagrán Gutiérrez", "ERNESTO GONZALEZ LUCAS", "GAUDENCIO CASTILLO ALARCON", "Héctor Hugo Contreras Ortiz", "Héctor López Arcos", "HEIMMY DIAZ AGUIRRE", "Hugo Contreras Ortíz", "Ia Gisela Méndez Caiceros", "Irene Hernández Gómez", "Jareth Adriana Castillo Velasco", "Joaquín Ramón Carranza Jiménez", "José Maria Marin Hoyos", "Julián Vásquez Gutiérrez", "Leonel Becerra Garcia",
+        "LUIS ALBERTO HERNÁNDEZ HERRERA", "Luis Orlando Licona García", "Manuel Cruz Vargas", "Maria de los Angeles Andrade Mendez", "Maricela Grappin Cabrera", "Mario Chacón Rodríguez", "Rafael Contreras Carranza", "Ruth Coral Bandala Arroyo", "SAYNE BENAVIDES BENAVIDES", "Suri Sadai Trinidad Garcia", "Wendy Guadalupe Gutiérrez Morales"
+    ];
 
-        var newContent = document.createTextNode(valornodo);
-        newDiv.appendChild(newContent); //añade texto al div creado.
+    cadena2 = ["CARRILLO MARURI MARIA LUCINDA",
+"RECIO VAZQUEZ ANA MARIA",
+"RINCON BENAVIDEZ ANALINE",
+"VENTURA RODRIGUEZ JUAN MANUEL",
+"SEGURA LIMAS LUIS IGNACIO",
+"BADILLO MERINO AZUCENA",
+"PEREZ DIAZ ALEJANDRO",
+"LOPEZ Y PERDOMO ADRIANA",
+"SALAZAR SERRANO GUADALUPE",
+"SANCHEZ TORRES LUIS DEL ANGEL",
+"MAGAÑA MARTINEZ RUBEN DARIO",
+"FRANCISCO LEON ALDOBELI",
+"SANCHEZ CERVANTES JESUS LUIS",
+"HERNANDEZ PEREZ FAUSTINO",
+"ACOSTA PARADA KARINA",
+"BECERRA GARCIA LEONEL",
+"BECERRA GARCIA MARIA DEL CARMEN",
+"CHAVEZ AVILA ADRIANA MARGARITA ",
+"GUERRERO HILARIO AURORA",
+"MENDEZ CAICEROS IA GISELA ",
+"PARADA CANTU RODOLFO",
+"RUANO LOPEZ MARCIAL",
+"VAZQUEZ MELGOZA JULIAN",
+"ORTIZ MONTALVO RENE",
+"ROLON MAY AMIR ALFREDO",
+"CONTRERAS LAURANCHET CARMEN",
+"RUANO SAMPAYO EDUARDO",
+"HERNANDEZ ROMERO GUADALUPE",
+"MACEGOZA HERNANDEZ LEYDI ANAIS",
+"TERAN MEZA EDGAR ESAU",
+"GONZALEZ RECIO JAQUELINE IRENE",
+"CONTRERAS ORTIZ HECTOR HUGO",
+"ESPINOZA HERRERA ANTONIO ",
+"CONTRERAS MORALES ZURIA",
+"LANDA DIAZ ANGELINA MIREYA",
+"MORALES HERNANDEZ BERNABE ",
+"BARRAGAN SANCHEZ OSCAR",
+"VILLEGAS GUZMAN JAVIER",
+"PARRA  SANCHEZ ISAURA",
+"HERNANDEZ PEREZ ANGEL FERNANDO",
+"BARCENAS CUEVAS LILIA AZUCENA",
+"MENDEZ CASTRO DANTE",
+"CAMPOS REYES RAMON",
+"PEREZ  VICEDAS ROSA YUVINA",
+"ATANACIO   FLORES MARTHA",
+"ALARCON  CASTILLO  GONZALO",
+"OLAZO LAGUNES XOCHITL MIREYA ",
+"JIMENEZ ENRIQUEZ DEMETRIO ",
+"CONTRERAS NEFTALI DE LA ROSA ",
+"BANDALA ARROYO RUTH CORAL ",
+"CARRANZA JIMENEZ JOAQUIN RAMON ",
+"AGUILAR BENAVIDES JUANA MARIA ",
+"ESCAMILLA CHAVEZ RUBI ",
+"CONTRERAS ORTIZ LIZ ADRIANA ",
+"GRAPPIN CABRERA MARICELA ",
+"CASTILLO VELASCO JARETH ADRIANA ",
+"VERGARA NAJERA ROCIO ",
+"OLARTE CERVANTES MARIO ",
+"DIAZ AGUIRRE HEIMMY ",
+"RIVERA RIVAS BRIANDA CITLALIT ",
+"CANDANEDO FUENTES ALBERTO",
+"PLACIDO ISLAS CESAR AUGUSTO ",
+"AGUILAR LOPEZ MARIA ANDREA ",
+"CASTAÑEDA ROMERO MARIA DE LOS ANGELES ",
+"GOMEZ ESPINOZA CARLOS FRANCISCO ",
+"GUTIERREZ ESTUDILLO MAXIMILIANO ",
+"GUTIERREZ MORALES WENDY GUADALUPE ",
+"RODRIGUEZ LOYO MARIA DE ROSARIO",
+"PAZOS ALARCON IRMA ANGELA",
+"VILLA ORTIZ OSCAR RUPERTO",
+"JIMENEZ JIMENEZ MARIA YADIRA",
+"BALTAZAR GRIJALVA DAGOBERTO",
+"CASTELAN TAPIA MARIA SOLEDAD",
+"CONTRERAS CARRANZA RAFAEL",
+"CONTRERAS ORTIZ HUGO",
+"PALACIOS PEREZ JAIME",
+"VILLAGRAN GUTIERREZ ERIKA",
+"CASTILLO ALARCON GAUDENCIO ",
+"JUAREZ ANDRADE ERIKA GUADALUPE",
+"MENDOZA GOMEZ JOSE DAVID",
+"RAMIREZ MALDONADO IVAN",
+"COUTURIER DIAZ OLEGARIA DEL CARMEN",
+"MACIAS ARROYO ERIC LORENZO",
+"BOCARANDO EUSEBIO HECTOR IVAN",
+"MIRANDA GARCIA ISIDRO",
+"SAMPAYO GARCIA MONSERRAT",
+"LUIS RODRIGUEZ Y PORTILLA",
+"HERNÁNDEZ RAMIREZ ROSALÍA",
+"KLUNDER AMAYA MIGUEL ANGEL ",
+"MENDOZA HERRERA GISELA",
+"ARROYO CABAÑAS VICTORIA",
+"SUAREZ RODRIGUEZ ARIANNA ISABEL ",
+"NAVA RIOS MARIA ELENA ",
+"JIMENEZ CORTES SUSANA",
+"CASTRO MARTINEZ ANA PAULINA ",
+"CABRERA RUIZ VALENTIN",
+"DORANTES RUIZ RAUL",
+"GONZALEZ NAVA MARIA GUADALUPE",
+"MORALES MUÑOZ ULISES",
+"HERNANDEZ ANDRADE JORGE ARTURO ",
+"MENDEZ MARTINEZ OMAR",
+"ROLON MAY OSCAR DIDIER ",
+"FLANDES VIRGEN ABIGAIL",
+"MURRIETA LANDA MARGARITA",
+"BLAS ROJAS DANIEL",
+"TELESFORO ALONSO ANTONIO",
+"NAVARRO CORTINA ISABEL",
+"LOPEZ BENITEZ JOSE BERNARDO ",
+"GARCIA ALMANZA EDGAR",
+"LOPEZ ARCOS HECTOR ",
+"RODRIGUEZ CHACON ABRAHAM ",
+"LOZANO HERNANDEZ YAMILLET HAPSUNE ",
+"GALVAN ZAVALETA FIDEL ",
+"CARREON MORENO ROGELIO ISAID",
+"BENAVIDES DIAZ SILVIA YARELY",
+"LOPEZ ABURTO IVAN VICENTE",
+"ACEVEDO ZAVALETA ELIA",
+"CAMPOS REYES ANA BERTHA",
+"BENAVIDES BENAVIDES SAYNE",
+"DORANTES MARTINEZ MARIEL",
+"SALGADO DOMINGUEZ EDILBERTO ",
+"AZUARA MENDEZ SANDRA IVONNE",
+"PAZOS VARELA MAIRELY",
+"RODRIGUEZ HERNANDEZ ARMANDO",
+"TIRADO CHAMU ANA LILIA",
+"SALAZAR MONTES EULALIA",
+"TINOCO CASTILLO HECTOR ",
+"CANTELLANO CASTILLO JOSE RENAN ",
+"DIAZ PARRA MARIA VELIA ",
+"CRUZ VARGAS MANUEL ",
+"TRUJILLO MARIN IVONNE ",
+"ALEMAN CESEÑA KARLA NAYELI ",
+"MARTINEZ ACOSTA ISABEL ",
+"BADILLO PLATAS ENRIQUE",
+"MARIN ROSAS SAUL",
+"REYES BANDALA OLIVIA",
+"SORIANO LEAL NESTOR",
+"ZARATE ARBONA ERNESTO RAFAEL",
+"PEÑA CEREZO JOSE",
+"GONZALEZ LUCAS ERNESTO ",
+"CHACON  RODRIGUEZ MARIO ",
+"HERNANDEZ BRINGAS CYNTHIA YUSSETE",
+"TLEMOYOTZI RODRIGUEZ SILVIA",
+"HERNANDEZ GOMEZ IRENE",
+"FERNANDEZ GOVEA JORGE LUIS",
+"HERRERA MARTINEZ JORAM ELIUD",
+"ESCAMILLA CHAVEZ JOSE JAIRO ",
+"GUERRERO MENDEZ ALCIRA ",
+"DEL PINO ALARCON MARIA ANGELICA ",
+"GARCIA HERNANDEZ OSMARA ZULEIMA ",
+"RIVERA AGGI DJEDID JEZIRE",
+"GUZMAN HUERTA URIEL",
+"CABRERA ALEJO MARCIAL",
+"HERNANDEZ GARCIA LUIS RICARDO",
+"GARCIA MACEGOZA JOSE ANTONIO",
+"CRUZ AVILA SOEMI ",
+"ROSAS SOBREVILLA OZIEL ",
+"PIMENTEL LOYA SILVIA MEREDITH ",
+"GONZALEZ ORTIZ ROBERTO ARGENIS ",
+"MOTA PEREZ CHRISTIAN EDERIC",
+];
 
-        // añade el elemento creado y su contenido al DOM
-        var currentDiv = document.getElementById("lienzoarbol");
-        document.body.insertBefore(newDiv, currentDiv);
+let matchedList = [];
+
+function normalize(str) {
+    return str
+        .normalize("NFD").replace(/[\u0300-\u036f]/g, "") // remove accents
+        .replace(/\s+/g, " ") // collapse spaces
+        .trim()
+        .toUpperCase();
+}
+
+let normalizedCadena1 = cadena1.map(name => ({
+    original: name,
+    normalized: normalize(name.split(" ").reverse().join(" "))
+}));
+
+let normalizedCadena2 = cadena2.map(name => normalize(name));
+
+for (let name2 of normalizedCadena2) {
+    let match = normalizedCadena1.find(obj => obj.normalized === name2);
+    if (match) {
+        matchedList.push(match.original);
     }
-    function agreganodo(valornodo, posx, posy) {
+}
 
+// Print the matched list in an HTML table
+let table = "<table border='1'><tr><th>#</th><th>Nombre</th></tr>";
+matchedList.forEach((name, idx) => {
+    table += `<tr><td>${idx + 1}</td><td>${name}</td></tr>`;
+});
+table += "</table>";
 
-        dibujanodo(valornodo, posx, posy);
-
-    }
-    agreganodo(58, 20, 110);
-    agreganodo(28, 50, 80);
-    agreganodo(30, 80, 110);
-    agreganodo(13, 80, 50);
-    agreganodo(70, 50, 140);
-    agreganodo(90, 80, 170);
-    agreganodo(29, 110, 80);
-
-
-
-
+document.write(table);
 </script>
-
-</html>

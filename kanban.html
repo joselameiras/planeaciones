@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tablero Kanban Mensual</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: #f8f9fa;
+        }
+        .kanban-board {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        .kanban-column {
+            background: #fff;
+            border-radius: 1rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            padding: 1rem;
+            flex: 1 1 0;
+            min-width: 80px;
+            max-width: 100%;
+            transition: box-shadow 0.3s;
+        }
+       
+              
+     
+            .kanban-board {
+                --column-count: 2;
+            /* Ajusta el ancho de columnas según cantidad */
+            gap: 1rem;
+            }
+            .kanban-column {
+            min-width: calc(100vw / var(--column-count, 4) - 2rem);
+            max-width: calc(100vw / var(--column-count, 4) - 2rem);
+            }
+        .kanban-column.current {
+            border: 2px solid #0d6efd;
+            box-shadow: 0 4px 16px rgba(13,110,253,0.12);
+        }
+        .kanban-column h5 {
+            text-align: center;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+        .kanban-card {
+            position: relative;
+            background: #f1f3f4;
+            border-radius: 0.75rem;
+            margin-bottom: 1rem;
+            padding: 1rem 1rem 2.5rem 1rem;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .kanban-card:hover {
+            transform: translateY(-4px) scale(1.03);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+        }
+        .card-day {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: 0.5rem;
+            width: 100%;
+            color: #222;
+        }
+        .card-indicator {
+            position: absolute;
+            right: 1rem;
+            bottom: 0.7rem;
+            font-size: 0.95rem;
+            background: rgba(0,0,0,0.07);
+            padding: 0.25rem 0.7rem;
+            border-radius: 1rem;
+            color: #444;
+            font-weight: 500;
+        }
+        /* Rubro colors */
+        .rubro-1 { background: #ffe5e5; border-left: 6px solid #e74c3c; }
+        .rubro-2 { background: #e5f7ff; border-left: 6px solid #3498db; }
+        .rubro-3 { background: #e5ffe5; border-left: 6px solid #27ae60; }
+        .rubro-4 { background: #fffbe5; border-left: 6px solid #f1c40f; }
+        .rubro-5 { background: #f5e5ff; border-left: 6px solid #9b59b6; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center mt-4 mb-2">Tablero Kanban Mensual</h2>
+        <div class="kanban-board" id="kanbanBoard"></div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Datos de ejemplo
+        const rubros = [
+            { id: 1, nombre: "Administrativo" },
+            { id: 2, nombre: "Académico" },
+            { id: 3, nombre: "Deportivo" },
+            { id: 4, nombre: "Cultural" },
+            { id: 5, nombre: "Social" }
+        ];
+        const actividades = [
+            { dia: "2025-08-01", titulo: "Revisión de informes", rubro: 1, terminados: 12, prioridad: 2 },
+            { dia: "2025-08-02", titulo: "Entrega de proyecto", rubro: 2, terminados: 20, prioridad: 1 },
+            { dia: "2025-09-03", titulo: "Entrenamiento", rubro: 3, terminados: 8, prioridad: 3 },
+            { dia: "2025-08-04", titulo: "Charla motivacional", rubro: 4, terminados: 15, prioridad: 2 },
+            { dia: "2025-08-05", titulo: "Taller de arte", rubro: 4, terminados: 18, prioridad: 3 },
+            { dia: "2025-08-06", titulo: "Reunión de equipo", rubro: 1, terminados: 22, prioridad: 1 },
+            { dia: "2025-08-07", titulo: "Evaluación mensual", rubro: 2, terminados: 10, prioridad: 2 },
+            { dia: "2025-08-08", titulo: "Competencia interna", rubro: 3, terminados: 16, prioridad: 3 },
+            { dia: "2025-08-09", titulo: "Fiesta temática", rubro: 5, terminados: 25, prioridad: 2 },
+            { dia: "2025-08-10", titulo: "Presentación de resultados", rubro: 2, terminados: 19, prioridad: 1 },
+            { dia: "2025-08-11", titulo: "Sesión de estudio", rubro: 2, terminados: 14, prioridad: 3 },
+            { dia: "2025-08-12", titulo: "Jornada de limpieza", rubro: 5, terminados: 21, prioridad: 2 },
+            { dia: "2025-08-13", titulo: "Entrenamiento", rubro: 3, terminados: 17, prioridad: 1 },
+            { dia: "2025-08-14", titulo: "Charla motivacional", rubro: 4, terminados: 23, prioridad: 2 },
+            { dia: "2025-08-15", titulo: "Reunión de equipo", rubro: 1, terminados: 11, prioridad: 3 },
+            { dia: "2025-08-16", titulo: "Taller de arte", rubro: 4, terminados: 20, prioridad: 1 },        
+        ];
+
+        // Utilidades para fechas
+        function getMonday(date) {
+            const d = new Date(date);
+            const day = d.getDay();
+            const diff = d.getDate() - day + (day === 0 ? -6 : 1); // lunes
+            return new Date(d.setDate(diff));
+        }
+        function formatDate(date) {
+            return date.toISOString().split('T')[0];
+        }
+        function addDays(date, days) {
+            const d = new Date(date);
+            d.setDate(d.getDate() + days);
+            return d;
+        }
+        function addWeeks(date, weeks) {
+            return addDays(date, weeks * 7);
+        }
+
+        // Estado de las columnas
+        // Input para cambiar el número de columnas visibles
+        const rangeDiv = document.createElement('div');
+        rangeDiv.className = 'd-flex justify-content-center align-items-center mb-3 gap-2';
+        rangeDiv.innerHTML = `
+            <label for="columnRange" class="form-label mb-0">Columnas visibles:</label>
+            <input type="range" id="columnRange" min="2" max="8" step="2" value="2" style="width:150px;">
+            <span id="columnRangeValue">2</span>
+        `;
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.querySelector('.container');
+            container.insertBefore(rangeDiv, container.children[1]);
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+            const columnRange = document.getElementById('columnRange');
+            const columnRangeValue = document.getElementById('columnRangeValue');
+            columnRange.oninput = function() {
+            numerocolumnasvisibles = parseInt(this.value);
+            columnRangeValue.textContent = this.value;
+
+            numerocolumnasvisibles = parseInt(this.value);
+
+            document.querySelector('.kanban-board').style.setProperty('--column-count', numerocolumnasvisibles);
+            // Recalcula mondayList y renderiza
+            const half = Math.floor(numerocolumnasvisibles / 2);
+            mondayList = [];
+            for (let i = -half; i < half; i++) {
+                mondayList.push(addWeeks(centralMonday, i));
+            }
+            renderBoard();
+            };
+        });
+        let numerocolumnasvisibles = 2; // Cambia este valor para ajustar el número de columnas visibles
+        // Calcula los lunes para las columnas visibles dinámicamente
+        let centralMonday = getMonday(new Date()); // semana actual (lunes)
+        let mondayList = [];
+        const half = Math.floor(numerocolumnasvisibles / 2);
+        for (let i = -half; i < half; i++) {
+            mondayList.push(addWeeks(centralMonday, i));
+        }
+
+        // Renderiza el tablero
+        function renderBoard() {
+            const board = document.getElementById('kanbanBoard');
+            board.innerHTML = '';
+
+            // Columnas
+            // Genera las columnas dinámicamente según mondayList
+            const columns = mondayList.map((monday, idx) => {
+               
+                return {
+                    monday,
+                    current: idx === half
+                };
+            });
+
+            columns.forEach((col, idx) => {
+            const colDiv = document.createElement('div');
+            colDiv.className = 'kanban-column' + (col.current ? ' current' : '');
+            colDiv.dataset.monday = formatDate(col.monday);
+
+            // Título con fecha
+            const endDate = addDays(col.monday, 6);
+            colDiv.innerHTML = `<h5><small>${formatDate(col.monday)} al ${formatDate(endDate)}</small></h5>`;
+
+            
+            // Actividades de la semana
+            const actividadesSemana = actividades.filter(act => {           
+                const actDate = new Date(act.dia);
+                console.log(`Checking activity ${act.titulo} on ${actDate.toISOString()} against week ${col.monday.toISOString()} to ${endDate.toISOString()}`);
+                return actDate >= col.monday && actDate <= endDate;
+            });
+
+            if (actividadesSemana.length > 0) {
+                actividadesSemana.forEach(act => {
+                    const card = document.createElement('div');
+                    card.className = `kanban-card rubro-${act.rubro}`;
+                    
+                    // Prioridad bandera
+                    let prioridadTexto = '';
+                    let prioridadColor = '';
+                    if (act.prioridad === 3) {
+                        prioridadTexto = 'Urgente';
+                        prioridadColor = 'danger';
+                    } else if (act.prioridad === 2) {
+                        prioridadTexto = 'Importante';
+                        prioridadColor = 'warning';
+                    } else {
+                        prioridadTexto = 'Opcional';
+                        prioridadColor = 'secondary';
+                    }
+
+                    card.innerHTML = `
+                        <div class="card-day">${new Date(act.dia).getDate()}</div>
+                        <div class="card-title">${act.titulo}</div>
+                        <span class="badge bg-${prioridadColor}" style="position:absolute;left:1rem;top:0.7rem;">${prioridadTexto}</span>
+                        <div class="card-indicator">${rubros.find(r => r.id === act.rubro)?.nombre || ''} (${act.terminados})</div>
+                    `;
+                    colDiv.appendChild(card);
+                });
+            } else {
+                colDiv.innerHTML += `<div class="text-muted text-center">Sin actividades</div>`;
+            }
+
+            board.appendChild(colDiv);
+            });
+        }
+
+        // Navegación
+        function moveWeeks(offset) {
+            centralMonday = addWeeks(centralMonday, offset);
+            mondayList = [];
+            const half = Math.floor(numerocolumnasvisibles / 2);
+            for (let i = -half; i < half; i++) {
+            mondayList.push(addWeeks(centralMonday, i));
+            }
+            renderBoard();
+        }
+
+        // Botones de navegación
+        const container = document.querySelector('.container');
+        const navDiv = document.createElement('div');
+        navDiv.className = 'd-flex justify-content-center align-items-center mb-3 gap-2';
+        navDiv.innerHTML = `
+            <button class="btn btn-outline-primary" id="prevWeek">&lt; Semana anterior</button>
+            <button class="btn btn-outline-primary" id="nextWeek">Semana siguiente &gt;</button>
+        `;
+        container.insertBefore(navDiv, container.children[1]);
+        document.getElementById('prevWeek').onclick = () => moveWeeks(-1);
+        document.getElementById('nextWeek').onclick = () => moveWeeks(1);
+
+        // Inicializa
+        renderBoard();
+       
+    </script>
+</body>
+</html>
