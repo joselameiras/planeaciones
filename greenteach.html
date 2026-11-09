@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#176b55">
+	<title>GreenTeach | Recursos educativos</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<style>
+		:root{--green:#176b55;--green-dark:#104c3d;--mint:#eaf5ef;--ink:#20352e;--muted:#6d7f77}
+		body{background:#f5f8f6;color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+		.navbar{background:var(--green)}.brand-mark{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:12px;background:#ffffff24;font-size:1.2rem}
+		.hero{background:linear-gradient(130deg,#104c3d,#238568);color:#fff;border-radius:0 0 28px 28px;padding:3.25rem 0 4.5rem}
+		.hero p{color:#d9eee5;max-width:620px}.main-wrap{margin-top:-2rem}.panel{border:0;border-radius:18px;box-shadow:0 12px 35px #183d2c12}
+		.step-number{width:30px;height:30px;display:inline-grid;place-items:center;border-radius:50%;background:var(--mint);color:var(--green);font-weight:700;margin-right:.55rem}
+		.form-select:focus{border-color:#69ad90;box-shadow:0 0 0 .25rem #176b551c}.form-label{font-weight:650}
+		.selection-banner{background:var(--mint);border:1px solid #d5e9dd;border-radius:14px}.resource-card{height:100%;border:1px solid #e6eee9;border-radius:15px;transition:transform .18s,box-shadow .18s}
+		.resource-card:hover{transform:translateY(-3px);box-shadow:0 10px 24px #183d2c12}.resource-id{font-size:.75rem;letter-spacing:.04em;color:var(--muted)}
+		.btn-green{background:var(--green);color:white}.btn-green:hover{background:var(--green-dark);color:#fff}.small-muted{color:var(--muted)}
+		footer{color:var(--muted)}
+	</style>
+</head>
+<body>
+	<nav class="navbar navbar-dark">
+		<div class="container"><a class="navbar-brand d-flex align-items-center gap-2 fw-semibold" href="#"><span class="brand-mark" aria-hidden="true">🌱</span> GreenTeach</a><span class="navbar-text text-white-50 d-none d-sm-inline">Biblioteca de recursos educativos</span></div>
+	</nav>
+	<header class="hero">
+		<div class="container">
+			<span class="badge rounded-pill text-bg-light mb-3">Explora y aprende</span>
+			<h1 class="display-5 fw-bold">Encuentra recursos para tu clase</h1>
+			<p class="lead mb-0">Selecciona tu nivel, grado o semestre y asignatura para descubrir materiales educativos relacionados.</p>
+		</div>
+	</header>
+	<main class="container main-wrap pb-5">
+		<section class="card panel p-3 p-md-4" aria-labelledby="selector-title">
+			<div class="card-body">
+				<h2 class="h4 fw-bold mb-1" id="selector-title">Personaliza tu búsqueda</h2>
+				<p class="small-muted mb-4">Completa las etapas en orden para ver los contenidos disponibles.</p>
+				<div class="row g-3">
+					<div class="col-12 col-md-4">
+						<label for="nivel" class="form-label"><span class="step-number">1</span>Nivel educativo</label>
+						<select id="nivel" class="form-select" aria-describedby="nivel-ayuda"><option value="">Selecciona un nivel</option></select>
+						<div class="form-text" id="nivel-ayuda">Elige primaria, secundaria o preparatoria.</div>
+					</div>
+					<div class="col-12 col-md-4">
+						<label for="grado" class="form-label"><span class="step-number">2</span>Grado o semestre</label>
+						<select id="grado" class="form-select" disabled><option value="">Primero selecciona un nivel</option></select>
+					</div>
+					<div class="col-12 col-md-4">
+						<label for="asignatura" class="form-label"><span class="step-number">3</span>Asignatura</label>
+						<select id="asignatura" class="form-select" disabled><option value="">Primero selecciona un grado</option></select>
+					</div>
+				</div>
+				<div id="mensaje" class="small-muted mt-3" role="status" aria-live="polite"></div>
+			</div>
+		</section>
+
+		<section id="resultados" class="mt-4 d-none" aria-live="polite">
+			<div class="selection-banner p-3 p-md-4 mb-3">
+				<div class="small text-uppercase fw-semibold small-muted">Tu selección</div>
+				<h2 class="h4 fw-bold mb-0" id="encabezado-seleccion"></h2>
+			</div>
+			<div class="d-flex justify-content-between align-items-center mb-3">
+				<h3 class="h5 fw-bold mb-0">Recursos educativos</h3><span class="badge rounded-pill text-bg-light" id="contador"></span>
+			</div>
+			<div class="row g-3" id="lista-recursos"></div>
+		</section>
+	</main>
+	<footer class="container py-4 border-top small">GreenTeach · Recursos para apoyar el aprendizaje.</footer>
+
+	<!-- Contenido TXT integrado para que esta página funcione como un único archivo. -->
+	<script type="text/plain" id="txt-niveles">Secundaria
+Preparatoria</script>
+	<script type="text/plain" id="txt-grados-primaria">1
+2
+3
+4
+5
+6</script>
+	<script type="text/plain" id="txt-grados-secundaria">1
+2
+3</script>
+	<script type="text/plain" id="txt-grados-preparatoria">1
+        2
+        3
+        4
+        5
+        6</script>
+	<script type="text/plain" id="txt-recursos">iddelrecurso\tnivel_educativo\tgrado\tasignatura\ttitulo\thref
+GT025\tSecundaria\t1\tEspañol\tLectura y análisis de textos\thttps://www.conaliteg.sep.gob.mx/
+GT026\tSecundaria\t1\tMatemáticas\tÁlgebra y razonamiento\thttps://es.khanacademy.org/math/algebra
+GT027\tSecundaria\t1\tBiología\tBiología y diversidad de la vida\thttps://www.conabio.gob.mx/
+GT028\tSecundaria\t1\tHistoria\tRecursos para estudiar historia\thttps://inehrm.gob.mx/
+GT029\tSecundaria\t2\tEspañol\tComunicación y comprensión lectora\thttps://www.conaliteg.sep.gob.mx/
+GT030\tSecundaria\t2\tMatemáticas\tGeometría y álgebra\thttps://es.khanacademy.org/math
+GT031\tSecundaria\t2\tFísica\tConceptos y actividades de física\thttps://www.fisica.unam.mx/
+GT032\tSecundaria\t2\tGeografía\tDatos, mapas y territorio\thttps://inegi.org.mx/app/mapa/espacioydatos/
+GT033\tSecundaria\t3\tEspañol\tLiteratura y escritura\thttps://www.conaliteg.sep.gob.mx/
+GT034\tSecundaria\t3\tMatemáticas\tFunciones y pensamiento algebraico\thttps://es.khanacademy.org/math/algebra
+GT035\tSecundaria\t3\tQuímica\tQuímica: materia y transformaciones\thttps://www.unam.mx/
+GT036\tSecundaria\t3\tFormación Cívica y Ética\tParticipación y derechos humanos\thttps://www.cndh.org.mx/
+GT037\tPreparatoria\t1\tMatemáticas\tÁlgebra y funciones\thttps://es.khanacademy.org/math/algebra
+GT037\tPreparatoria\t1\tMatemáticas\tNumeros egipcios actividad\thttps://www.academia.edu/36798868/Actividades_matematica_egipcia
+GT038\tPreparatoria\t1\tComunicación\tLectura crítica y escritura\thttps://www.conaliteg.sep.gob.mx/
+GT039\tPreparatoria\t1\tBiología\tBiología celular y ciencias de la vida\thttps://www.conabio.gob.mx/
+GT040\tPreparatoria\t1\tQuímica\tFundamentos de química\thttps://www.unam.mx/
+GT041\tPreparatoria\t1\tHistoria\tFuentes y materiales de historia\thttps://inehrm.gob.mx/
+GT042\tPreparatoria\t2\tMatemáticas\tCálculo y pensamiento matemático\thttps://es.khanacademy.org/math
+GT043\tPreparatoria\t2\tComunicación\tRecursos para comunicar ideas\thttps://www.conaliteg.sep.gob.mx/
+GT044\tPreparatoria\t2\tFísica\tFísica: movimiento y energía\thttps://www.fisica.unam.mx/
+GT045\tPreparatoria\t2\tQuímica\tReacciones y conceptos de química\thttps://www.unam.mx/
+GT046\tPreparatoria\t2\tHistoria\tHistoria y sociedad\thttps://inehrm.gob.mx/
+GT047\tPreparatoria\t3\tMatemáticas\tProbabilidad y estadística\thttps://es.khanacademy.org/math/statistics-probability
+GT048\tPreparatoria\t3\tComunicación\tLectura y producción de textos\thttps://www.conaliteg.sep.gob.mx/
+GT049\tPreparatoria\t3\tEcología\tBiodiversidad y conservación\thttps://www.conabio.gob.mx/
+GT050\tPreparatoria\t3\tFísica\tEnergía y fenómenos físicos\thttps://www.fisica.unam.mx/</script>
+
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script>
+		$(function(){
+			const $nivel=$("#nivel"),$grado=$("#grado"),$asignatura=$("#asignatura");
+			const readTxt=id=>$("#"+id).text().trim().split(/\r?\n/).map(x=>x.trim()).filter(Boolean);
+			const nivelKey={Primaria:"primaria",Secundaria:"secundaria",Preparatoria:"preparatoria"};
+			const records=readTxt("txt-recursos").slice(1).map(line=>{
+				const [iddelrecurso,nivel_educativo,grado,asignatura,titulo,href]=line.split(/\t|\\t/);
+				return {iddelrecurso,nivel_educativo,grado,asignatura,titulo,href};
+                //console.log("Parsed record:", {iddelrecurso,nivel_educativo,grado,asignatura,titulo,href}); // Debugging line
+			}).filter(r=>r.href && /^https:\/\//.test(r.href));
+            console.log("All records loaded:", records); // Debugging line
+			function fill($select,items,placeholder){
+				$select.empty().append($("<option>",{value:"",text:placeholder}));
+				items.forEach(item=>$select.append($("<option>",{value:item,text:item})));
+				$select.prop("disabled",!items.length);
+			}
+			fill($nivel,readTxt("txt-niveles"),"Selecciona un nivel");
+			function resetResults(){ $("#resultados").addClass("d-none"); $("#lista-recursos").empty(); }
+			$nivel.on("change",function(){
+				const level=this.value; resetResults();
+				fill($asignatura,[],"Primero selecciona un grado");
+				if(!level){fill($grado,[],"Primero selecciona un nivel");$("#mensaje").text("");return;}
+				const gradoFile="txt-grados-"+nivelKey[level];
+				fill($grado,readTxt(gradoFile),level==="Preparatoria"?"Selecciona un semestre":"Selecciona un grado");
+				$("#mensaje").text("");
+			});
+			$grado.on("change",function(){
+				resetResults();const level=$nivel.val(),grade=this.value;
+                console.log("Selected:", level, grade); // Debugging line
+				if(!level||!grade){fill($asignatura,[],"Primero selecciona un grado");return;}
+				const subjects=[...new Set(records.filter(r=>r.nivel_educativo===level&&r.grado===grade).map(r=>r.asignatura))];
+                console.log("Available subjects:", subjects); // Debugging line
+				fill($asignatura,subjects,"Selecciona una asignatura");
+				$("#mensaje").text(subjects.length?"":"No hay asignaturas registradas para esta selección.");
+			});
+			$asignatura.on("change",function(){
+				const level=$nivel.val(),grade=$grado.val(),subject=this.value;
+                console.log("Selected:", level, grade, subject); // Debugging line
+				if(!level||!grade||!subject){resetResults();return;}
+                console.log("records before filtering:", records); // Debugging line
+                console.log("Filtering records for:", {level, grade, subject}); // Debugging line
+				const items=records.filter(r=>r.nivel_educativo===level&&r.grado===grade&&r.asignatura===subject);
+				$("#encabezado-seleccion").text(`${level} · ${level==="Preparatoria"?"Semestre":"Grado"} ${grade} · ${subject}`);
+				$("#contador").text(`${items.length} ${items.length===1?"recurso":"recursos"}`);
+				const $list=$("#lista-recursos").empty();
+                console.log("Filtered items:", items); // Debugging line
+				items.forEach(r=>{
+					const $col=$("<div>",{class:"col-12 col-md-6 col-lg-4"});
+					const $card=$("<article>",{class:"resource-card bg-white p-3 d-flex flex-column"});
+					$card.append($("<div>",{class:"resource-id mb-2",text:r.iddelrecurso}));
+					$card.append($("<h4>",{class:"h6 fw-bold",text:r.titulo}));
+					$card.append($("<p>",{class:"small-muted small mb-3",text:`${r.asignatura} · ${level} ${grade}`}));
+					$card.append($("<a>",{class:"btn btn-green btn-sm mt-auto align-self-start",href:r.href,target:"_blank",rel:"noopener noreferrer",text:"Abrir recurso ↗","aria-label":`Abrir recurso: ${r.titulo} (se abre en una pestaña nueva)`}));
+					$col.append($card);$list.append($col);
+				});
+				$("#mensaje").text(items.length?"":"Aún no hay recursos para esta asignatura.");
+				$("#resultados").removeClass("d-none");
+			});
+		});
+	</script>
+</body>
+</html>
